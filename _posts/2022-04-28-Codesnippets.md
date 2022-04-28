@@ -3,9 +3,14 @@ title: Installing Hello on Debian 11
 date: 2022-04-28 13:54:00 +/-TTTT
 ---
 
+
+##Introduction
+
 The GNU hello program produces a familiar, friendly greeting. It allows non-programmers to use a classic computer science tool which would otherwise be unavailable to them. 
 
-To install hello on Debian 11, perform the following steps:
+##Updating the system
+
+First, make sure your system is up to date.
 
 Download updated package information from all configured sources:
 
@@ -18,6 +23,7 @@ Upgrade all installed packages to their latest versions:
 ``` bash
 sudo apt upgrade
 ```
+##Installing Hello
 
 Next, install Hello:
 
@@ -32,4 +38,5 @@ hello
 Hello, world!
 ```
 
-This post was created to test Rouge code snippets and syntax highlighting for Jekyll.
+##Refrences
+[GNU Hello](https://packages.debian.org/sid/hello)
