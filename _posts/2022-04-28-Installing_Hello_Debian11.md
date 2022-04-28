@@ -1,5 +1,5 @@
 ---
-title: Installing Hello on Debian 11
+title: Installing GNU Hello on Debian 11
 date: 2022-04-28 13:54:00 +/-TTTT
 ---
 
@@ -7,6 +7,8 @@ date: 2022-04-28 13:54:00 +/-TTTT
 ## Introduction
 
 The GNU hello program produces a familiar, friendly greeting. It allows non-programmers to use a classic computer science tool which would otherwise be unavailable to them. 
+
+This tutorial is written for Debian 11, however this process should work for most Debian or Ubuntu based systems. Follow along to learn how to install GNU Hello.
 
 ## Updating the system
 
