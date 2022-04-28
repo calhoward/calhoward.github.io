@@ -10,7 +10,7 @@ The GNU hello program produces a familiar, friendly greeting. It allows non-prog
 
 ## Updating the system
 
-First, make sure your system is up to date.
+First, make sure your system is up to date. We will accomplish this by running apt update & apt upgrade.
 
 Download updated package information from all configured sources:
 
