@@ -23,7 +23,7 @@ timezone: America/New_York
 
 title: Cal Howard                          # the main title
 
-tagline: Chronicling my discoveries in the field  # it will display as the sub-title
+tagline: Chronicling my discoveries in the tech world  # it will display as the sub-title
 
 description: >-                        # used by seo meta and the atom feed
   A website by Cal Howard
