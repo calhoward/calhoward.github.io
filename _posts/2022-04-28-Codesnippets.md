@@ -7,18 +7,18 @@ To install hello on Debian 11, perform the following steps:
 
 Update repositories:
 
-``` bash
-sudo apt update
+```
+ sudo apt update
 ```
 
-``` bash
-sudo apt upgrade
+```
+ sudo apt upgrade
 ```
 
 Next, install hello:
 
-``` bash
-sudo apt install hello
+```
+ sudo apt install hello
 ```
 
 That's it, we're done! This post was created to test Rouge code snippets and syntax highlighting for Jekyll.
