@@ -23,13 +23,13 @@ timezone: America/New_York
 
 title: Cal Howard                          # the main title
 
-tagline: Chronicling my discoveries in the world of innovation and technology   # it will display as the sub-title
+tagline: Chronicling my discoveries in the world of tech  # it will display as the sub-title
 
 description: >-                        # used by seo meta and the atom feed
   A website by Cal Howard
 
 # fill in the protocol & hostname for your site, e.g., 'https://username.github.io'
-url: 'https://calhoward.github.io'
+url: 'https://calhoward.com'
 
 github:
   username: calhoward            # change to your github username
