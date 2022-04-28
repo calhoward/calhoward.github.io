@@ -5,7 +5,7 @@ date: 2022-04-28 11:50:00 +/-TTTT
 
 Oh boy, here I go creating again!
 
- Welcome to my blog. This is a "Hello World" post. I'll be updating this website with my findings, tutorials, how-to's, whatever I can to help the community at large. 
+ Welcome to my blog. This is a "Hello World" post. I'll be updating this website with my findings, tutorials, how-to's; whatever I can to help the community at large. 
  
  As a general principle, I follow and support the notions of the Free Software Movement, formally founded by Richard Stallman upon launching the GNU Project in 1983. I would like to expand upon and build on these notions and principles by personally proclaiming that I believe each and every discovery made by humanity— not limited to software and computing, rather, applying to all fields of innovation and technology— should be documented, "open-sourced", and freely accessible to all.
 
