@@ -7,17 +7,17 @@ To install hello on Debian 11, perform the following steps:
 
 Update repositories:
 
-```
+``` bash
  sudo apt update
 ```
 
-```
+``` bash
  sudo apt upgrade
 ```
 
 Next, install hello:
 
-```
+``` bash
  sudo apt install hello
 ```
 
