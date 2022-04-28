@@ -4,11 +4,11 @@ date: 2022-04-28 13:54:00 +/-TTTT
 ---
 
 
-##Introduction
+## Introduction
 
 The GNU hello program produces a familiar, friendly greeting. It allows non-programmers to use a classic computer science tool which would otherwise be unavailable to them. 
 
-##Updating the system
+## Updating the system
 
 First, make sure your system is up to date.
 
@@ -23,7 +23,7 @@ Upgrade all installed packages to their latest versions:
 ``` bash
 sudo apt upgrade
 ```
-##Installing Hello
+## Installing Hello
 
 Next, install Hello:
 
@@ -38,5 +38,5 @@ hello
 Hello, world!
 ```
 
-##Refrences
+## Refrences
 [GNU Hello](https://packages.debian.org/sid/hello)
