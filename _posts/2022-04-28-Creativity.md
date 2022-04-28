@@ -3,7 +3,7 @@ title: Creativity
 date: 2022-04-28 11:50:00 +/-TTTT
 ---
 
-Here I go creating again!
+Oh boy, here I go creating again!
 
  Welcome to my blog. This is a "Hello World" post. I'll be updating this website with my findings, tutorials, how-to's, whatever I can to help the community at large. 
  
