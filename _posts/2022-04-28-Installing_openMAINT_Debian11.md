@@ -64,7 +64,44 @@ sudo apt upgrade -y
 ```
 ## Installing Dependencies
 
-Next, install:
+Now that our system is up-to-date, it is time to install dependencies required by openMAINT 3.4. Use the -y flag to save time and skip "yes" prompts.
+
+OpenJDK 17:
+
+```bash
+sudo apt install -y openjdk-17-jdk
+```
+
+To make sure OpenJDK 17 has been installed correctly, and that your $JAVA_HOME environment variable is correctly configured, use the Java version command:
+
+```bash
+java -version
+```
+```bash
+openjdk version "17.0.2" 2022-01-18
+OpenJDK Runtime Environment (build 17.0.2+8-Debian-1deb11u1)
+OpenJDK 64-Bit Server VM (build 17.0.2+8-Debian-1deb11u1, mixed mode, sharing)
+```
+
+At the time of writing, the most up-to-date build is 17.0.2. If you don't see at least version 17.x.x, you may have to configure alternatives for Java:
+
+```bash
+sudo update-alternatives --config java
+```
+```bash
+There are 2 choices for the alternative java (providing /usr/bin/java).
+
+  Selection    Path                                         Priority   Status
+------------------------------------------------------------
+* 0            /usr/lib/jvm/java-17-openjdk-amd64/bin/java   1711      auto mode
+  1            /usr/lib/jvm/java-11-openjdk-amd64/bin/java   1111      manual mode
+  2            /usr/lib/jvm/java-17-openjdk-amd64/bin/java   1711      manual mode
+
+Press <enter> to keep the current choice[*], or type selection number:
+```
+
+In my case, I had OpenJDK 11 installed. Simply type the correct number and press enter.
+
 
 ``` bash
 sudo apt install 
