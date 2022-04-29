@@ -27,6 +27,12 @@ Once the above requirements are satisfied and you are able to remotely connect t
 
 First, make sure your system is up to date. We will accomplish this by running apt update & apt upgrade.
 
+Log in to your server using the account you created while setting up Debian. In our case, I've named the user "openmaint". 
+
+``` bash
+ssh openmaint@<server_ip>
+```
+
 Download updated package information from all configured sources:
 
 ``` bash
