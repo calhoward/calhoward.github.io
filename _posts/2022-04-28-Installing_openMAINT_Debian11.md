@@ -62,11 +62,23 @@ Upgrade all installed packages to their latest versions:
 ``` bash
 sudo apt upgrade -y
 ```
-## Installing Dependencies
+
+## Installing utilities
+
+In order to bring about the successful installation of openMAINT (and all its dependencies), we will be working with a few commandline utilities. These utilities are [gnupg2](https://packages.debian.org/bullseye/gnupg2), [wget](https://packages.debian.org/bullseye/wget), [unzip](https://packages.debian.org/bullseye/unzip), [git](https://packages.debian.org/bullseye/git), [curl](https://packages.debian.org/bullseye/curl), and [nano](https://packages.debian.org/bullseye/nano).
+
+Install them all simultaneously with the following single command. Use the -y flag to save time and skip "yes" prompts:
+
+```bash
+apt install -y gnupg2 wget unzip git curl nano
+```
+
+
+## Installing dependencies
 
 Now that our system is up-to-date, it is time to install dependencies required by openMAINT 3.4. Use the -y flag to save time and skip "yes" prompts.
 
-OpenJDK 17:
+[openjdk-17-jdk](https://packages.debian.org/bullseye/openjdk-17-jdk):
 
 ```bash
 sudo apt install -y openjdk-17-jdk
@@ -100,12 +112,8 @@ There are 2 choices for the alternative java (providing /usr/bin/java).
 Press <enter> to keep the current choice[*], or type selection number:
 ```
 
-In my case, I had OpenJDK 11 installed. Simply type the correct number and press enter.
+In my case, I also had OpenJDK 11 installed. Simply type the correct number and press enter.
 
-
-``` bash
-sudo apt install 
-```
 
 ## Disclaimer
 
