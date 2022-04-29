@@ -19,6 +19,8 @@ Check out Tecnoteca's [What is openMAINT](https://www.openmaint.org/en/product/p
 
 To continue, we will assume you have already installed a fresh copy of [Debian 11 "Bullseye" (stable)](https://www.debian.org/releases/stable/) running [openssh-server](https://packages.debian.org/bullseye/openssh-server) (or your preferred SSH server of choice), with root access enabled. A desktop environment is not required to set up an openMAINT server. 
 
+Follow [my guide](https://calhoward.com/2022-04-28-Installing_Debian11) on installing Debian 11 if you're unsure of how to get a Debian system up and running. Also, follow my [other guide](https://calhoward.com/2022-04-28-Installing_openssh-server_Debian11) on installing and setting up a SSH server if you're unsure of how to do that.
+
 Once the above requirements are satisfied and you are able to remotely connect to your Debian server, continue to the next step.
 
 ## Updating the system
