@@ -23,7 +23,7 @@ Follow [my guide on installing Debian 11](https://calhoward.com/2022-04-28-Insta
 
 Once the above requirements are satisfied and you are able to remotely connect to your Debian server, continue to the next step.
 
-## Log in for the first time
+## Logging in for the first time
 
 We will mainly be interacting with our server by using the SSH protocol. From any terminal, use the ssh command to log in with the user you created while setting up Debian. In our case, I've named the user "openmaint":
 
@@ -37,6 +37,7 @@ Make sure your user has access to sudo privileges by issuing the whoami command.
 sudo whoami
 ```
 ```bash
+↵
 We trust you have received the usual lecture from the local System
 Administrator. It usually boils down to these three things:
 
@@ -44,7 +45,7 @@ Administrator. It usually boils down to these three things:
     #2) Think before you type.
     #3) With great power comes great responsibility.
 
-[sudo] password for openmaint:
+[sudo] password for openmaint:↵
 root
 ```
 ## Updating the system
@@ -90,6 +91,7 @@ To make sure OpenJDK 17 has been installed correctly, and that your $JAVA_HOME e
 java -version
 ```
 ```bash
+↵
 openjdk version "17.0.2" 2022-01-18
 OpenJDK Runtime Environment (build 17.0.2+8-Debian-1deb11u1)
 OpenJDK 64-Bit Server VM (build 17.0.2+8-Debian-1deb11u1, mixed mode, sharing)
@@ -101,6 +103,7 @@ At the time of writing, the most up-to-date build is 17.0.2. If you don't see at
 sudo update-alternatives --config java
 ```
 ```bash
+↵
 There are 2 choices for the alternative java (providing /usr/bin/java).
 
   Selection    Path                                         Priority   Status
@@ -115,6 +118,7 @@ Press <enter> to keep the current choice[*], or type selection number:
 In my case, I also had OpenJDK 11 installed. Simply type the correct number and press enter.
 
 ```bash
+0↵
 update-alternatives: using /usr/lib/jvm/java-17-openjdk-amd64/bin/java to provide /usr/bin/java (java) in auto mode
 ```
 
@@ -126,6 +130,7 @@ Run the following command to install the [GPG key](https://wiki.debian.org/GnuPG
 wget --quiet -O - https://www.postgresql.org/media/keys/ACCC4CF8.asc | sudo apt-key add -
 ```
 ```bash
+↵
 Warning: apt-key is deprecated. Manage keyring files in trusted.gpg.d instead (see apt-key(8)).
 OK
 ```
@@ -137,6 +142,7 @@ echo "deb [arch=amd64] http://apt.postgresql.org/pub/repos/apt/ focal-pgdg main"
 ```
 
 ```bash
+↵
 deb [arch=amd64] http://apt.postgresql.org/pub/repos/apt/ focal-pgdg main
 ```
 
