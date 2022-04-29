@@ -49,18 +49,18 @@ root
 ```
 ## Updating the system
 
-First, make sure your system is up to date. We will accomplish this by running apt update & apt upgrade.
+Before we install any software, make sure your system is up to date. We will accomplish this by running apt update & apt upgrade. Use the -y flag to save time and skip "yes" prompts.
 
 Download updated package information from all configured sources:
 
 ``` bash
-sudo apt update
+sudo apt update -y
 ```
 
 Upgrade all installed packages to their latest versions:
 
 ``` bash
-sudo apt upgrade
+sudo apt upgrade -y
 ```
 ## Installing Dependencies
 
