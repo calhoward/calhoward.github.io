@@ -4,6 +4,8 @@ date: 2022-04-28 13:54:00 +/-TTTT
 ---
 
 
+![]({{ site.baseurl }}/img/2022/pexels-pixabay-207580.png)
+
 ## Introduction
 
 The GNU hello program produces a familiar, friendly greeting. It allows non-programmers to use a classic computer science tool which would otherwise be unavailable to them. 
