@@ -9,7 +9,7 @@ date: 2022-04-29 10:48:00 +/-TTTT
 
 [openMAINT](https://www.openmaint.org/en) is a ready-to-use CMMS program (Computerized Maintenance Management System) created and maintained by [Tecnoteca Srl](https://www.tecnoteca.com/). It is a powerful tool that, when configured to suit the needs of your enterprise, can transform the way you organaize and manage your work. openMAINT is a "verticalized" solution built atop [CMDBuild](https://www.cmdbuild.org/en/homepage), also maintained by Tecnoteca, Srl.
 
-Check out Tecnoteca's [What is openMAINT?](https://www.openmaint.org/en/product/project) page to learn more about the project, or request a [demo](https://www.openmaint.org/en/contacts/request-demo) to see if openMAINT might work for you.
+Check out Tecnoteca's [What is openMAINT](https://www.openmaint.org/en/product/project) page to learn more about the project, or request a [demo](https://www.openmaint.org/en/contacts/request-demo) to see if openMAINT might work for you.
 
 ## Installing the base system
 
