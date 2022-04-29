@@ -37,7 +37,6 @@ Make sure your user has access to sudo privileges by issuing the whoami command.
 sudo whoami
 ```
 ```bash
-↵
 We trust you have received the usual lecture from the local System
 Administrator. It usually boils down to these three things:
 
@@ -45,7 +44,7 @@ Administrator. It usually boils down to these three things:
     #2) Think before you type.
     #3) With great power comes great responsibility.
 
-[sudo] password for openmaint:↵
+[sudo] password for openmaint:
 root
 ```
 ## Updating the system
@@ -91,7 +90,6 @@ To make sure OpenJDK 17 has been installed correctly, and that your $JAVA_HOME e
 java -version
 ```
 ```bash
-↵
 openjdk version "17.0.2" 2022-01-18
 OpenJDK Runtime Environment (build 17.0.2+8-Debian-1deb11u1)
 OpenJDK 64-Bit Server VM (build 17.0.2+8-Debian-1deb11u1, mixed mode, sharing)
@@ -103,7 +101,6 @@ At the time of writing, the most up-to-date build is 17.0.2. If you don't see at
 sudo update-alternatives --config java
 ```
 ```bash
-↵
 There are 2 choices for the alternative java (providing /usr/bin/java).
 
   Selection    Path                                         Priority   Status
@@ -118,11 +115,11 @@ Press <enter> to keep the current choice[*], or type selection number:
 In my case, I also had OpenJDK 11 installed. Simply type the correct number and press enter.
 
 ```bash
-0↵
+0
 update-alternatives: using /usr/lib/jvm/java-17-openjdk-amd64/bin/java to provide /usr/bin/java (java) in auto mode
 ```
 
-Next, install PostgreSQL. At the time of writing, openMAINT does not support versions of PostgreSQL higher than 10.7. We will be installing version 10 to use as the database backend for our openMAINT instance.
+Next, we must add PostgreSQL repos to our sources list.
 
 Run the following command to install the [GPG key](https://wiki.debian.org/GnuPG):
 
@@ -130,7 +127,6 @@ Run the following command to install the [GPG key](https://wiki.debian.org/GnuPG
 wget --quiet -O - https://www.postgresql.org/media/keys/ACCC4CF8.asc | sudo apt-key add -
 ```
 ```bash
-↵
 Warning: apt-key is deprecated. Manage keyring files in trusted.gpg.d instead (see apt-key(8)).
 OK
 ```
@@ -138,27 +134,43 @@ OK
 Next, add PostgreSQL repository to your apt sources:
 
 ```bash
-echo "deb [arch=amd64] http://apt.postgresql.org/pub/repos/apt/ focal-pgdg main" | sudo tee  /etc/apt/sources.list.d/pgdg.list
+echo "deb http://apt.postgresql.org/pub/repos/apt/ `lsb_release -cs`-pgdg main" |sudo tee  /etc/apt/sources.list.d/pgdg.list
 ```
 
 ```bash
-↵
-deb [arch=amd64] http://apt.postgresql.org/pub/repos/apt/ focal-pgdg main
+deb http://apt.postgresql.org/pub/repos/apt/ bullseye-pgdg main
 ```
 
-Update your system:
+Update your system. Use the -y flag to save time and skip "yes" prompts:
 
 ```bash
 sudo apt update -y
 ```
 
-Finally, install PostgreSQL 10 and PostgreSQL contrib:
+Finally, install PostgreSQL. Use the -y flag to save time and skip "yes" prompts:
 
 ```bash
-sudo apt install -y postgresql-10 postgresql-contrib
+sudo apt install -y postgresql-13 postgresql-client-10 postgresql-10-postgis-3 libpostgis-java
+```
+
+Once PostgreSQL is installed, it is time to pick a strong password and apply it to the user "postgres".
+
+Use passwd to set your new strong password:
+
+```bash
+sudo passwd postgres
+```
+```bash
+New password:
+Retype new password:
+passwd: password updated successfully
 ```
 
 
+
+## Installing openMAINT
+
+Now that openMAINT's dependencies are installed and properly configured, 
 ## Disclaimer
 
 *I am not affiliated with Tecnoteca Srl., nor am I maintainer of either openMAINT, or CMDBuild. This guide is written in good faith, and in the spirit of contribution towards the Free Software Movement, for consumption as-is.*
