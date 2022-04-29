@@ -23,15 +23,23 @@ Follow [my guide on installing Debian 11](https://calhoward.com/2022-04-28-Insta
 
 Once the above requirements are satisfied and you are able to remotely connect to your Debian server, continue to the next step.
 
-## Updating the system
+## Log in for the first time
 
-First, make sure your system is up to date. We will accomplish this by running apt update & apt upgrade.
-
-Log in to your server using the account you created while setting up Debian. In our case, I've named the user "openmaint". 
+We will mainly be interacting with our server by using the SSH protocol. From any terminal, use the ssh command to log in with the user you created while setting up Debian. In our case, I've named the user "openmaint":
 
 ``` bash
 ssh openmaint@<server_ip>
 ```
+
+Make sure your user has access to sudo privileges by issuing the whoami command. The console should return "root":
+
+``` bash
+sudo whoami
+root
+```
+## Updating the system
+
+First, make sure your system is up to date. We will accomplish this by running apt update & apt upgrade.
 
 Download updated package information from all configured sources:
 
