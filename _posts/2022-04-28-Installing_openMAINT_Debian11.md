@@ -13,7 +13,7 @@ Check out Tecnoteca's [What is openMAINT](https://www.openmaint.org/en/product/p
 
 ## Installing the base system
 
-![]({{ site.baseurl }}/assets/img/2022/pexels-field-engineer-442152 Cropped.jpg)
+![]({{ site.baseurl }}/assets/img/2022/pexels-field-engineer-442152_Cropped.jpg)
 
 To continue, we will assume you have already installed a fresh copy of [Debian 11 "Bullseye" (stable)](https://www.debian.org/releases/stable/) running [openssh-server](https://packages.debian.org/bullseye/openssh-server) (or your preferred SSH server of choice), with root access enabled. A desktop environment is not required to set up an openMAINT server. 
 
