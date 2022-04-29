@@ -123,13 +123,21 @@ Next, install PostgreSQL. At the time of writing, openMAINT does not support ver
 Run the following command to install the [GPG key](https://wiki.debian.org/GnuPG):
 
 ```bash
-wget --quiet -O - https://www.postgresql.org/media/keys/ACCC4CF8.asc | apt-key add -
+wget --quiet -O - https://www.postgresql.org/media/keys/ACCC4CF8.asc | sudo apt-key add -
+```
+```bash
+Warning: apt-key is deprecated. Manage keyring files in trusted.gpg.d instead (see apt-key(8)).
+OK
 ```
 
 Next, add PostgreSQL repository to your apt sources:
 
+```bash
+echo "deb [arch=amd64] http://apt.postgresql.org/pub/repos/apt/ focal-pgdg main" | sudo tee  /etc/apt/sources.list.d/pgdg.list
 ```
-echo "deb [arch=amd64] http://apt.postgresql.org/pub/repos/apt/ focal-pgdg main" | tee  /etc/apt/sources.list.d/pgdg.list
+
+```bash
+deb [arch=amd64] http://apt.postgresql.org/pub/repos/apt/ focal-pgdg main
 ```
 
 Update your system:
