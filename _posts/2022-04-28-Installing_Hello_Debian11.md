@@ -4,6 +4,7 @@ date: 2022-04-28 13:54:00 +/-TTTT
 ---
 
 ![]({{ site.baseurl }}/assets/img/2022/pexels-pixabay-207580_cropped16_9.jpg)
+*Photo credit - [Pixabay](https://www.pexels.com/@pixabay/)*
 
 ## Introduction
 
