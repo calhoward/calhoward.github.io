@@ -165,12 +165,46 @@ New password:
 Retype new password:
 passwd: password updated successfully
 ```
+Next, we must update the postgres role with the new password. Use the su (switch user) command to switch to the postgres user:
+
+```bash
+su - postgres
+```
+```bash
+Password:
+```
+
+Use psql to alter the password for postgres:
+
+```bash
+psql -d template1 -c "ALTER USER postgres WITH PASSWORD 'StrongPassword';"
+```
+```
+ALTER ROLE
+```
+
+Then type exit to log out:
+```bash
+exit
+```
+```bash
+logout
+```
+
+
 
 
 
 ## Installing openMAINT
 
-Now that openMAINT's dependencies are installed and properly configured, 
+Now that openMAINT's dependencies are installed and properly configured, we can now move forward and install openMAINT.
+
+Use wget to download the latest .WAR file for openMAINT. At the time of writing, the latest version is [openmaint-2.2-3.4](https://sourceforge.net/projects/openmaint/files/2.2/Core%20updates/openmaint-2.2-3.4/).
+
+'''bash
+wget https://sourceforge.net/projects/openmaint/files/2.2/Core%20updates/openmaint-2.2-3.4/openmaint-2.2-3.4.war
+'''
+
 ## Disclaimer
 
 *I am not affiliated with Tecnoteca Srl., nor am I maintainer of either openMAINT, or CMDBuild. This guide is written in good faith, and in the spirit of contribution towards the Free Software Movement, for consumption as-is.*
