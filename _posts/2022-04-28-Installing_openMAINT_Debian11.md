@@ -70,7 +70,7 @@ In order to bring about the successful installation of openMAINT (and all its de
 Install them all simultaneously with the following single command. Use the -y flag to save time and skip "yes" prompts:
 
 ```bash
-apt install -y gnupg2 wget unzip git curl nano
+sudo apt install -y gnupg2 wget unzip git curl nano
 ```
 
 
@@ -113,6 +113,36 @@ Press <enter> to keep the current choice[*], or type selection number:
 ```
 
 In my case, I also had OpenJDK 11 installed. Simply type the correct number and press enter.
+
+```bash
+update-alternatives: using /usr/lib/jvm/java-17-openjdk-amd64/bin/java to provide /usr/bin/java (java) in auto mode
+```
+
+Next, install PostgreSQL. At the time of writing, openMAINT does not support versions of PostgreSQL higher than 10.7. We will be installing version 10 to use as the database backend for our openMAINT instance.
+
+Run the following command to install the [GPG key](https://wiki.debian.org/GnuPG):
+
+```bash
+wget --quiet -O - https://www.postgresql.org/media/keys/ACCC4CF8.asc | apt-key add -
+```
+
+Next, add PostgreSQL repository to your apt sources:
+
+```
+echo "deb [arch=amd64] http://apt.postgresql.org/pub/repos/apt/ focal-pgdg main" | tee  /etc/apt/sources.list.d/pgdg.list
+```
+
+Update your system:
+
+```bash
+sudo apt update -y
+```
+
+Finally, install PostgreSQL 10 and PostgreSQL contrib:
+
+```bash
+sudo apt install -y postgresql-10 postgresql-contrib
+```
 
 
 ## Disclaimer
