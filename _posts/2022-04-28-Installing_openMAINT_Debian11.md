@@ -1,10 +1,10 @@
 ---
-title: Installing openMAINT 3.4 on Debian 11
+title: Installing openMAINT 3.4 on Debian 11 "Bullseye"
 date: 2022-04-29 10:48:00 +/-TTTT
 ---
 
 ![]({{ site.baseurl }}/assets/img/2022/pexels-kateryna-babaieva-2760241_cropped16_9.jpg)
-*Photo Credit - [Kateryna Babaieva](https://www.pexels.com/@kateryna-babaieva-1423213/)*
+*Photo credit - [Kateryna Babaieva](https://www.pexels.com/@kateryna-babaieva-1423213/)*
 
 ## Introduction
 
@@ -15,7 +15,7 @@ Check out Tecnoteca's [What is openMAINT](https://www.openmaint.org/en/product/p
 ## Installing the base system
 
 ![]({{ site.baseurl }}/assets/img/2022/pexels-field-engineer-442152_Cropped.jpg)
-*Photo Credit - [Field Engineer](https://www.pexels.com/@field-engineer-147254/)*
+*Photo credit - [Field Engineer](https://www.pexels.com/@field-engineer-147254/)*
 
 To continue, we will assume you have already installed a fresh copy of [Debian 11 "Bullseye" (stable)](https://www.debian.org/releases/stable/) running [openssh-server](https://packages.debian.org/bullseye/openssh-server) (or your preferred SSH server of choice), with root access enabled. A desktop environment is not required to set up an openMAINT server. 
 
@@ -46,7 +46,9 @@ Next, install:
 sudo apt install 
 ```
 
+## Disclaimer
 
+I am not affiliated with Tecnoteca Srl., nor am I maintainer of either openMAINT or CMDBuild. This guide is written in good faith, and in the spirit of contribution towards the Free Software Movement, for consumption as-is. Further support may not be offered. Some of the steps may cease to function as software packages are either updated, deprecated, or obseleted. 
 ## Refrences
 
 [openMAINT on SourceForge](https://sourceforge.net/projects/openmaint/)
