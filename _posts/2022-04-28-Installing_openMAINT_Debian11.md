@@ -36,7 +36,7 @@ Make sure your user has access to sudo privileges by issuing the whoami command.
 ``` bash
 sudo whoami
 ```
-```bash
+```
 We trust you have received the usual lecture from the local System
 Administrator. It usually boils down to these three things:
 
@@ -89,7 +89,7 @@ To make sure OpenJDK 17 has been installed correctly, and that your $JAVA_HOME e
 ```bash
 java -version
 ```
-```bash
+```
 openjdk version "17.0.2" 2022-01-18
 OpenJDK Runtime Environment (build 17.0.2+8-Debian-1deb11u1)
 OpenJDK 64-Bit Server VM (build 17.0.2+8-Debian-1deb11u1, mixed mode, sharing)
@@ -100,7 +100,7 @@ At the time of writing, the most up-to-date build is 17.0.2. If you don't see at
 ```bash
 sudo update-alternatives --config java
 ```
-```bash
+```
 There are 2 choices for the alternative java (providing /usr/bin/java).
 
   Selection    Path                                         Priority   Status
@@ -114,7 +114,7 @@ Press <enter> to keep the current choice[*], or type selection number:
 
 In my case, I also had OpenJDK 11 installed. Simply type the correct number and press enter.
 
-```bash
+```
 0
 update-alternatives: using /usr/lib/jvm/java-17-openjdk-amd64/bin/java to provide /usr/bin/java (java) in auto mode
 ```
@@ -126,7 +126,7 @@ Run the following command to install the [GPG key](https://wiki.debian.org/GnuPG
 ```bash
 wget --quiet -O - https://www.postgresql.org/media/keys/ACCC4CF8.asc | sudo apt-key add -
 ```
-```bash
+```
 Warning: apt-key is deprecated. Manage keyring files in trusted.gpg.d instead (see apt-key(8)).
 OK
 ```
@@ -136,8 +136,7 @@ Next, add PostgreSQL repository to your apt sources:
 ```bash
 echo "deb http://apt.postgresql.org/pub/repos/apt/ `lsb_release -cs`-pgdg main" |sudo tee  /etc/apt/sources.list.d/pgdg.list
 ```
-
-```bash
+```
 deb http://apt.postgresql.org/pub/repos/apt/ bullseye-pgdg main
 ```
 
@@ -160,7 +159,7 @@ Use passwd to set your new strong password:
 ```bash
 sudo passwd postgres
 ```
-```bash
+```
 New password:
 Retype new password:
 passwd: password updated successfully
@@ -170,7 +169,7 @@ Next, we must update the postgres role with the new password. Use the su (switch
 ```bash
 su - postgres
 ```
-```bash
+```
 Password:
 ```
 
@@ -187,23 +186,19 @@ Then type exit to log out:
 ```bash
 exit
 ```
-```bash
+```
 logout
 ```
-
-
-
-
-
 ## Installing openMAINT
 
 Now that openMAINT's dependencies are installed and properly configured, we can now move forward and install openMAINT.
 
 Use wget to download the latest .WAR file for openMAINT. At the time of writing, the latest version is [openmaint-2.2-3.4](https://sourceforge.net/projects/openmaint/files/2.2/Core%20updates/openmaint-2.2-3.4/).
 
-'''bash
+```bash
 wget https://sourceforge.net/projects/openmaint/files/2.2/Core%20updates/openmaint-2.2-3.4/openmaint-2.2-3.4.war
-'''
+```
+
 
 ## Disclaimer
 
