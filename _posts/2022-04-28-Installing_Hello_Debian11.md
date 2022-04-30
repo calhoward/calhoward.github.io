@@ -8,13 +8,13 @@ date: 2022-04-28 13:54:00 +/-TTTT
 
 ## Introduction
 
-The GNU hello program produces a familiar, friendly greeting. It allows non-programmers to use a classic computer science tool which would otherwise be unavailable to them. 
+The GNU `hello` program produces a familiar, friendly greeting. It allows non-programmers to use a classic computer science tool which would otherwise be unavailable to them. 
 
 This tutorial is written for Debian 11, however this process should work for most Debian or Ubuntu based systems. Follow along to learn how to install GNU Hello.
 
 ## Updating the system
 
-First, make sure your system is up to date. We will accomplish this by running apt update & apt upgrade.
+First, make sure your system is up to date. We will accomplish this by running `apt update` & `apt upgrade`.
 
 Download updated package information from all configured sources:
 
