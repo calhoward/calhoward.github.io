@@ -27,3 +27,16 @@ We will use `pg_dump`  to create a `.dump`  file of our PostgreSQL database. Mod
 * The `-f`  flag specifies our `filename.dump`
 
 That's it! You will find your output `.dump` file in whatever directory you ran the command in.
+
+## Disclaimer
+
+*I am not affiliated with Tecnoteca Srl., nor am I maintainer of either openMAINT, or CMDBuild. This guide is written in good faith, and in the spirit of contribution towards the Free Software Movement, for consumption as-is.*
+
+*Some of the steps listed in this guide may break or cease to function as software packages are updated, deprecated, or become obseleted.*
+## Refrences
+
+[openMAINT on SourceForge](https://sourceforge.net/projects/openmaint/)
+
+[openmaint.org](https://www.openmaint.org/)
+
+[pg_dump on postgresql.org](https://www.postgresql.org/docs/current/app-pgdump.html)
