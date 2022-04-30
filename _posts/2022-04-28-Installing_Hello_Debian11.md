@@ -1,10 +1,10 @@
 ---
 title: Installing GNU Hello on Debian 11
 date: 2022-04-28 13:54:00 +/-TTTT
-image: {{ site.baseurl }}/pexels-pixabay-207580_Cropped-min.jpg
+image: {{ site.baseurl }}/assets/img/2022/pexels-pixabay-207580-Cropped-min.jpg
 ---
 
-![]({{ site.baseurl }}/assets/img/2022/pexels-pixabay-207580_Cropped-min.jpg)
+![]({{ site.baseurl }}/assets/img/2022/pexels-pixabay-207580-Cropped-min.jpg)
 *Photo credit - [Pixabay](https://www.pexels.com/@pixabay/)*
 
 ## Introduction
