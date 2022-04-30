@@ -14,16 +14,16 @@ Follow this guide for an explanation of how `pg_dump`  works in the context of o
 
 ## Backing up the database
 
-We will use `pg_dump`  to create a `.dump`  file of our PostgreSQL database. Modify the following command and use it to create your database backup:
+We will use `pg_dump`  to create a `.dump`  file of our PostgreSQL database. Modify the following command to fit your database and name the output file, and use it to create your database backup:
 
 ```bash
  pg_dump -Fc -h 127.0.0.1 --cluster 10/main -U postgres <your_database_name> -f openMAINT_backup_MM_DD_YYYY.dump
  ```
 
 * The `-Fc`  flag specifies that the database has a custom format.
-* The `-h`  flag specifies the host, 127.0.0.1 in the case of a standard openMAINT install
-* The `--cluster`  flag specifies version "10/main". This is necessary to avoid version mismatching when restoring to an instance of openMAINT running on top of PostgreSQL 10.
-* The `-U`  flag is our user, "postgres", in the case of a standard openMAINT install
-* The `-f`  flag specifies our filename
+* The `-h`  flag specifies the host `127.0.0.1` in the case of a standard openMAINT installation
+* The `--cluster`  flag specifies version `10/main`. This is necessary to avoid version mismatching when restoring to an instance of openMAINT running on top of PostgreSQL 10.
+* The `-U`  flag is our user, `postgres`, in the case of a standard openMAINT installation
+* The `-f`  flag specifies our `filename.dump`
 
 That's it! You will find your output `.dump` file in whatever directory you ran the command in.
