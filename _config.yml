@@ -35,7 +35,7 @@ plugins:
   - jekyll-sitemap
 
 github:
-  username: calhoward            # change to your github username
+  username: calhoward            # chaxnge to your github username
 
 twitter:
   username: calhoward           # change to your twitter username
