@@ -39,8 +39,9 @@ That's it, we're done! Now, test the output of Hello:
 
 ``` bash
 hello
+```
+```
 Hello, world!
 ```
-
 ## Refrences
 [GNU Hello](https://packages.debian.org/sid/hello)
