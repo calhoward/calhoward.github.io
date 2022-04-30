@@ -19,8 +19,8 @@ We will use pg_dump to create a .DUMP file of our PostgreSQL database. Modify th
  pg_dump -Fc -h 127.0.0.1 --cluster 10/main -U postgres <your_database_name> -f openMAINT_backup_MM_DD_YYYY.dump
  ```
 
-The -Fc flag specifies that the database has a custom format.
-The -h flag specifies the host, 127.0.0.1 in the case of a standard openMAINT install
-The --cluster flag specifies version "10/main". This is necessary to avoid version mismatching when restoring to an instance of openMAINT running on top of PostgreSQL 10.
-The -U flag is our user, "postgres", in the case of a standard openMAINT install
-The -f flag specifies our filename
+* The -Fc flag specifies that the database has a custom format.
+* The -h flag specifies the host, 127.0.0.1 in the case of a standard openMAINT install
+* The --cluster flag specifies version "10/main". This is necessary to avoid version mismatching when restoring to an instance of openMAINT running on top of PostgreSQL 10.
+* The -U flag is our user, "postgres", in the case of a standard openMAINT install
+* The -f flag specifies our filename
