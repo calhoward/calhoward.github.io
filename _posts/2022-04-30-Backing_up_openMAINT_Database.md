@@ -10,8 +10,8 @@ The information in your openMAINT instance is stored in a PostgreSQL database. I
 
 Follow this guide for an explanation of how `pg_dump`  works in the context of openMAINT's database.
 
-*Note: At the time of writing, the most recent version of openMAINT is [openMAINT 3.4](https://sourceforge.net/projects/openmaint/files/2.2/Core%20updates/openmaint-2.2-3.4/) and it is still recommended to use PostgreSQL version 10, so this guide will assume your database is also configured for use with PostgreSQL 10.*
-
+>*Note: At the time of writing, the most recent version of openMAINT is [openMAINT 3.4](https://sourceforge.net/projects/openmaint/files/2.2/Core%20updates/openmaint-2.2-3.4/) and it is still recommended to use PostgreSQL version 10, so this guide will assume your database is also configured for use with PostgreSQL 10.*
+{: .prompt-tip }
 ## Backing up the database
 
 We will use `pg_dump`  to create a `.dump`  file of our PostgreSQL database. Modify the following command to fit your database and name the output file, and use it to create your database backup:
