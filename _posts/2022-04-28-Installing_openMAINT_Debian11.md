@@ -204,34 +204,52 @@ Now, execute the install script with java:
 java -jar openmaint-2.2-3.4.war install
 ```
 
+Follow through the prompts. You may leave all of the defaults as they are by pressing enter on each line. Make sure you enter your strong password you created for the postgres user.
+
 ```
 CMDBuild interactive install wizard - welcome!
 
 this wizard will guide you in the process of installing and configuring a new instance of CMDBuild!
 ```
-Follow through the prompts. You may leave all of the defaults as they are by pressing enter on each line. Make sure you enter your strong password you created for the postgres user.
+
+Press enter to leave the default install location:
 
 ```
 tomcat install location </home/openmaint/cmdbuild_30> :
 ```
+
+Press enter to leave the default http port:
+
 ```
 tomcat http port <8080>:
 ```
+
+Press enter to leave the default shutdown port:
+
 ```
 tomcat shutdown port (offset already applied) <8005>:
 ```
+
+Press enter to leave the default debug port:
+
 ```
 tomcat debug port (offset already applied) <8000>:
 ```
+
+Press enter to leave the default postgres database host/port:
+
 ```
 postrgres db <localhost:5432> : 
 ```
 
-Enter your strong password you picked for the postgres user:
+Input your strong password for the postgres admin account:
 
 ```
 postrgres admin account <postgres/postgres> : postgres/StrongPassword
 ```
+
+Press enter to leave the default database name:
+
 ```
 WARNING: server version 10.20 is not supported, you may encounter problems
 cmdbuild posrgres database name <cmdbuild_a70b> :
@@ -275,6 +293,34 @@ OK
 
 cmdbuild successfully installed! you can find startup/shutdown scripts in dir /home/openmaint/cmdbuild_30/bin
 ```
+
+openMAINT and its dependencies are now successfully installed.
+
+## Starting openMAINT
+
+Now that openMAINT and its dependencies are installed, it is time to start the server up. Navigate to the bin directory to find the startup script:
+
+```bash
+cd ~/cmdbuild_30/bin
+```
+
+Run startup.sh:
+
+```bash
+./startup.sh
+```
+
+```
+Using CATALINA_BASE:   /home/openmaint/cmdbuild_30
+Using CATALINA_HOME:   /home/openmaint/cmdbuild_30
+Using CATALINA_TMPDIR: /home/openmaint/cmdbuild_30/temp
+Using JRE_HOME:        /usr
+Using CLASSPATH:       /home/openmaint/cmdbuild_30/bin/bootstrap.jar:/home/openmaint/cmdbuild_30/bin/tomcat-juli.jar
+Using CATALINA_OPTS:
+Using CATALINA_PID:    /home/openmaint/cmdbuild_30/bin/catalina.pid
+Tomcat started.
+```
+
 
 ## Disclaimer
 
