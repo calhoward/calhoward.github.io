@@ -321,6 +321,14 @@ Using CATALINA_PID:    /home/openmaint/cmdbuild_30/bin/catalina.pid
 Tomcat started.
 ```
 
+That's it! openMAINT is now running on your local server and is accessible via http://<server-ip>:8080/cmdbuild/ui.
+
+For further reading, check out my other guide [Securing Your openMAINT Server on Debian 11 with SSL](https://calhoward.com/2022-04-29-Securing_openMAINT_Debian11_SSL). 
+
+For help onboarding, see [Onboarding openMAINT 3.4](https://calhoward.com/2022-04-29-Onboarding_openMAINT3.4).
+
+
+
 
 ## Disclaimer
 

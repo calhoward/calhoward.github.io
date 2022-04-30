@@ -17,7 +17,7 @@ I am reachable via my email, cal@calhoward.com. Please also follow links to my s
 
 That's all for now. I'm excited to document and upload all of my findings that I think might be useful to other people. If you're reading this, whatever you do, do this: Don't stop learning, creating, innovating. Makers, creators, movers and shakers are our hope of survival. 
 
-Do good things. Thank you,
+Do good things,
 
 — Cal
 
