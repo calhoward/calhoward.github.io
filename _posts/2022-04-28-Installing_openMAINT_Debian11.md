@@ -1,7 +1,7 @@
 ---
 title: Installing openMAINT 3.4 on Debian 11 "Bullseye"
 date: 2022-04-29 10:48:00 +/-TTTT
-thumbnail: {https://calhoward.com/assets/img/2022/pexels-kateryna-babaieva-2760241_cropped16_9.jpg
+thumbnail: https://calhoward.com/assets/img/2022/pexels-kateryna-babaieva-2760241_cropped16_9.jpg
 ---
 
 ![]({{ site.baseurl }}/assets/img/2022/pexels-kateryna-babaieva-2760241_cropped16_9.jpg)
