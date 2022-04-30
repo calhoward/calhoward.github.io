@@ -198,7 +198,83 @@ Use wget to download the latest .WAR file for openMAINT. At the time of writing,
 ```bash
 wget https://sourceforge.net/projects/openmaint/files/2.2/Core%20updates/openmaint-2.2-3.4/openmaint-2.2-3.4.war
 ```
+Now, execute the install script with java:
 
+```bash
+java -jar openmaint-2.2-3.4.war install
+```
+
+```
+CMDBuild interactive install wizard - welcome!
+
+this wizard will guide you in the process of installing and configuring a new instance of CMDBuild!
+```
+Follow through the prompts. You may leave all of the defaults as they are by pressing enter on each line. Make sure you enter your strong password you created for the postgres user.
+
+```
+tomcat install location </home/openmaint/cmdbuild_30> :
+```
+```
+tomcat http port <8080>:
+```
+```
+tomcat shutdown port (offset already applied) <8005>:
+```
+```
+tomcat debug port (offset already applied) <8000>:
+```
+```
+postrgres db <localhost:5432> : 
+```
+
+Enter your strong password you picked for the postgres user:
+
+```
+postrgres admin account <postgres/postgres> : postgres/StrongPassword
+```
+```
+WARNING: server version 10.20 is not supported, you may encounter problems
+cmdbuild posrgres database name <cmdbuild_a70b> :
+```
+
+To initialize openMAINT with a blank database, load "empty.dump.xz":
+
+```
+database dump to load <demo> : empty.dump.xz
+```
+
+Look over your inputs and verify the configuration is correct:
+
+```
+we're ready to begin, this is your configuration:
+
+         tomcat: /home/openmaint/cmdbuild_30
+         http port: 8080
+         shutdown port: 8005
+         debug port: 8000
+         postgres database: localhost:5432/cmdbuild_a70b
+         database dump: empty.dump.xz
+
+if everything is ok, press ENTER to begin installation
+<press enter to begin>
+```
+
+Press enter to begin installation:
+
+```
+BEGIN installation
+install tomcat...
+OK
+create database...
+create database cmdbuild_a70b empty.dump.xz
+apply patches
+adjust configs
+done
+OK
+
+
+cmdbuild successfully installed! you can find startup/shutdown scripts in dir /home/openmaint/cmdbuild_30/bin
+```
 
 ## Disclaimer
 
