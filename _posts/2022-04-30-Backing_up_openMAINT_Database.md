@@ -2,7 +2,8 @@
 title: Backing up an openMAINT Database with pg_dump
 date: 2022-04-30 10:48:00 +/-TTTT
 ---
-
+![]({{ site.baseurl }}/assets/img/2022/pexels-panumas-nikhomkhai-1148820_Cropped-min.jpg)
+*Photo credit - [panumas nikhomkhai](https://www.pexels.com/@cookiecutter/)
 ## Introduction
 
 *Note: At the time of writing, the most recent version of openMAINT is [openMAINT 3.4](https://sourceforge.net/projects/openmaint/files/2.2/Core%20updates/openmaint-2.2-3.4/) and it is recommended to install PostgreSQL 10, so this guide will assume your database is also versioned for PostgreSQL 10.*
