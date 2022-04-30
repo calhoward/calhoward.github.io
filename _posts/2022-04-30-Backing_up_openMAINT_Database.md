@@ -1,8 +1,9 @@
 ---
 title: Backing up an openMAINT Database with pg_dump
 date: 2022-04-30 10:48:00 +/-TTTT
+image: https://calhoward.com/assets/img/2022/pexels-panumas-nikhomkhai-1148820-Cropped-min.jpg
 ---
-![]({{ site.baseurl }}/assets/img/2022/pexels-panumas-nikhomkhai-1148820_Cropped-min.jpg)
+![]({{ site.baseurl }}/assets/img/2022/pexels-panumas-nikhomkhai-1148820-Cropped-min.jpg)
 *Photo credit - [panumas nikhomkhai](https://www.pexels.com/@cookiecutter/)*
 ## Introduction
 
