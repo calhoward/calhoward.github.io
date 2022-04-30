@@ -14,7 +14,7 @@ Follow this guide for an explanation of how *pg_dump*  works in the context of o
 
 ## Backing up the database
 
-We will use *pg_dump*  to create a *dump*  file of our PostgreSQL database. Modify the following command and use it to create your database backup:
+We will use `pg_dump`  to create a *dump*  file of our PostgreSQL database. Modify the following command and use it to create your database backup:
 
 ```bash
  pg_dump -Fc -h 127.0.0.1 --cluster 10/main -U postgres <your_database_name> -f openMAINT_backup_MM_DD_YYYY.dump
