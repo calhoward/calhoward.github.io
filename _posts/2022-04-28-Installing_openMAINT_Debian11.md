@@ -193,7 +193,7 @@ logout
 
 Now that openMAINT's dependencies are installed and properly configured, we can now move forward and install openMAINT.
 
-Use `wget` to download the latest .WAR file for openMAINT. At the time of writing, the latest version is [openmaint-2.2-3.4](https://sourceforge.net/projects/openmaint/files/2.2/Core%20updates/openmaint-2.2-3.4/).
+Use `wget` to download the latest `.war` file for openMAINT. At the time of writing, the latest version is [openmaint-2.2-3.4](https://sourceforge.net/projects/openmaint/files/2.2/Core%20updates/openmaint-2.2-3.4/).
 
 ```bash
 wget https://sourceforge.net/projects/openmaint/files/2.2/Core%20updates/openmaint-2.2-3.4/openmaint-2.2-3.4.war
