@@ -8,7 +8,7 @@ date: 2022-04-30 10:48:00 +/-TTTT
 
 *Note: At the time of writing, the most recent version of openMAINT is [openMAINT 3.4](https://sourceforge.net/projects/openmaint/files/2.2/Core%20updates/openmaint-2.2-3.4/) and it is recommended to install PostgreSQL 10, so this guide will assume your database is also versioned for PostgreSQL 10.*
 
-The information in your openMAINT instance is stored in a PostgreSQL database. It can be simply backed up in the form of a .DUMP file with a single command. 
+The information in your openMAINT instance is stored in a PostgreSQL database. It can be simply backed up in the form of a *.dump*  file with a single command. 
 
 Follow this guide for an explanation of how *pg_dump*  works in the context of openMAINT's database.
 
