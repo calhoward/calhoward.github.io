@@ -23,3 +23,6 @@ gem "webrick", "~> 1.7"
 
 # Install Jekyll Compose plugin
 gem 'jekyll-compose', group: [:jekyll_plugins]
+
+# Install Jekyll Sitemap plugin
+gem 'jekyll-sitemap'
