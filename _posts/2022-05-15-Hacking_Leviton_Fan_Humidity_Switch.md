@@ -15,23 +15,23 @@ image: https://calhoward.com/assets/img/2022/Hacking-Leviton-Fan-Humidity-Switch
 >This post is a WIP, check back soon!
 {: .prompt-tip }
 
-The *[Leviton IPHS5-1LW In-Wall Humidity Sensor & Fan Control](https://www.leviton.com/en/products/iphs5-1lw)* is a neat, novel method of controlling your bathroom fan. The humidity sensor only turns the fan on when it is needed, and then shuts off when air humidity return to normal. This is certainly useful as a modern convenicence, as well as a clever energy-saving device. 
+The [Leviton](https://www.leviton.com) *[IPHS5-1LW](https://www.leviton.com/en/products/iphs5-1lw)* in-wall humidity sensor & fan control is a neat, novel method of controlling your bathroom fan. The humidity sensor turns the fan on when humidity is sensed, and then shuts off when ambient humidity returns to normal. This is certainly useful as a modern convenicence, as well as a clever energy-saving device. 
 
-As dandy as this little switch is, it's smart, but it's not *smart*. By *smart*, I mean *internet-of-things* smart. Unfortunately, this device's automation routines are subject and limited to its own local decision-making, and cannot be externally influenced nor read from. 
+As dandy as this little switch is, it's smart, but it's not *smart*. By *smart*, I mean *internet-of-things* smart. Unfortunately, this device's automation routines are subject and limited to its own local decision-making, and cannot be externally influenced nor read from. Alas, this can be fixed.
 
 ![]({{ site.baseurl }}/assets/img/2022/pexels-anete-lusina-4790264 Cropped-min.jpg)
 *Photo credit - [Anete Lusina](https://www.pexels.com/@anete-lusina/)*
 
-With some reverse engineering and hacking, we can get this switch online and connected to our home automation server by integrating its logic with an [ESP8266](https://www.espressif.com/en/products/socs/esp8266) Wi-Fi MCU. Once connected, we can even interface with it using smart assistants like Alexa, Siri, and Google Home. 
+With some reverse engineering and hacking, we can get this switch online and connected to our home automation server by integrating its logic with an [Espressif](https://www.espressif.com/) *[ESP8266](https://www.espressif.com/en/products/socs/esp8266)* Wi-Fi MCU. Once connected, we can even interface with it using smart assistants like Alexa, Siri, and Google Home. 
 
 ## Analyzing the board
 
-The first step in reverse-engineering a circuit is to take a glance at the board and find the main logic ICs. In this case, I identified the *[Microchip](https://www.microchip.com/) [PIC16F1823 8-bit microcontroller IC](https://www.digikey.com/en/products/detail/microchip-technology/PIC16F1823-I-SL/2258580)* as the main logic processor used in the Leviton *IPHS5-1LW*. For this project, the *PIC16F1823* will be our target for analyzing the circuit's logic, as well as tapping into and controlling its I/O.
+The first step in reverse-engineering a circuit is to take a glance at the board and find the main logic ICs. In this case, I identified the [Microchip](https://www.microchip.com/) *[PIC16F1823](https://www.digikey.com/en/products/detail/microchip-technology/PIC16F1823-I-SL/2258580)* 8-bit microcontroller IC as the main logic processor used in the Leviton *IPHS5-1LW* switch. The *PIC16F1823* will be our main target for analyzing and hacking the circuit's logic.
 
 ![]({{ site.baseurl }}/assets/img/2022/Hacking-Leviton-Fan-Humidity-Switch/05_15_2022_02-min.jpg)
 *Fig. 1 - Photo of the IPHS5-1LW logic board*
 
-Pictured above (*Fig. 1*) is a close-up shot of the low-voltage logic board found in the *Leviton IPHS5-1LW*. The larger 14-pin IC in the top-right is the *PIC16F1823*. From this image, we can see several empty through-hole pads used for testing/probing in the factory where the board is assembled. These can be useful as probing points, as some of these have traces leading directly to the SMD pins on the *PIC15F1823*. 
+Pictured above (*Fig. 1*) is a close-up shot of the low-voltage logic board found in the Leviton *IPHS5-1LW*. The larger 14-pin IC in the top-right is the *PIC16F1823*. From this image, we can see several empty through-hole pads used for testing/probing in the factory where the board is assembled. These can be useful as probing points, as some of these have traces leading directly to the SMD pins on the *PIC15F1823*. 
 
 Of course, the [datasheet](https://ww1.microchip.com/downloads/en/DeviceDoc/PIC12LF1822-16LF1823-Data-Sheet-40001413F.pdf) will tell us everything we need to know about each of the the I/O pins, as shown in the following diagram and chart pulled from the datasheet:
 
