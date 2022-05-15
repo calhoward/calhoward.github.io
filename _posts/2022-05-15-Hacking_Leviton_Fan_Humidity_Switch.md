@@ -12,12 +12,12 @@ image: https://calhoward.com/assets/img/2022/Hacking-Leviton-Fan-Humidity-Switch
 >**DANGER!**  This guide involves working with high voltage AC wiring. Do not attempt to perform manual wiring on any of the circuits in your home. This guide is intended solely for educational use. 
 {: .prompt-danger }
 
->**DANGER!**  Do not disassemble AC wiring devices as even de-energized devices may still store lethal energy in their components. 
+>**DANGER!**  Do not disassemble AC wiring devices as even de-energized devices may store some lethal energy in their components. 
 {: .prompt-danger }
 
-The [Leviton](https://www.leviton.com) [IPHS5-1LW In-Wall Humidity Sensor & Fan Control](https://www.leviton.com/en/products/iphs5-1lw) is a neat, novel method of controlling your bathroom fan. Its built-in humidity sensor turns the fan on when humidity is sensed, and then shuts it off when ambient humidity returns to normal (i.e. when the room steams up from a shower). This is certainly useful as a modern convenicence, as well as a clever energy-saving device. 
+The [Leviton](https://www.leviton.com) [IPHS5-1LW In-Wall Humidity Sensor & Fan Control](https://www.leviton.com/en/products/iphs5-1lw) is a neat, novel method of controlling your bathroom fan. Its built-in humidity sensor turns the fan on when humidity is sensed, and then shuts it off when ambient humidity returns to normal (i.e. when the room steams up from a shower). This is certainly useful as a modern convenicence, as well as it is a clever energy-saving device. 
 
-As dandy as this little switch is, it's smart, but it's not *smart* smart. By *smart* smart, I mean *internet-of-things* smart. Unfortunately, this device's automation routines are subject and limited to its own local decision-making, and cannot be externally influenced nor read from. Alas, this can be fixed:
+As dandy as this little switch is, it's smart, but it's not *smart* smart. By *smart* smart, I mean *[internet-of-things](https://en.wikipedia.org/wiki/Internet_of_things)* smart. Unfortunately, this device's automation routines are subject and limited to its own local decision-making, and cannot be externally influenced nor read from. Alas, this can be fixed:
 
 ![]({{ site.baseurl }}/assets/img/2022/pexels-anete-lusina-4790264 Cropped-min.jpg)
 *Photo credit - [Anete Lusina](https://www.pexels.com/@anete-lusina/)*
