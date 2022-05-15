@@ -75,7 +75,7 @@ After careful soldering to `VSS`, `VDD` and `RA0` via the through-hole pads, as 
 
 ## Buttoning it up
 
-Voilà— the Leviton *IPHS5-1LW* switch is fully re-assembled and with exposed headers to leads `VSS` (3v3), `VDD` (ground), `RA0` (button), and `RC5` (fan relay driver) from the *PIC15F1823* microcontroller.
+Voilà— the Leviton *IPHS5-1LW* switch is fully re-assembled and with exposed headers to leads `VSS` (3v3), `VDD` (ground), `RA0` (activation button), and `RC5` (fan relay driver) from the *PIC15F1823* microcontroller.
 
 ![]({{ site.baseurl }}/assets/img/2022/Hacking-Leviton-Fan-Humidity-Switch/05_15_2022_05-min.jpg)
 *Pictured - The fully packaged IPHS5-1LW with modded signal wires added*
