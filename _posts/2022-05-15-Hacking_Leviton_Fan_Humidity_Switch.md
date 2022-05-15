@@ -30,9 +30,9 @@ The first step in reverse-engineering a circuit is to take a glance at the board
 ![]({{ site.baseurl }}/assets/img/2022/Hacking-Leviton-Fan-Humidity-Switch/05_15_2022_02-min.jpg)
 *Fig. 1 - Photo of the IPHS5-1LW logic board*
 
-Pictured above (*Fig. 1*) is a close-up shot of the low-voltage logic board found in the Leviton *IPHS5-1LW*. The larger 14-pin IC in the top-right is the *PIC16F1823*. From this image, we can see several empty through-hole pads used for testing/probing in the factory where the board is assembled. These can be useful as probing points, as some of these have traces leading directly to the SMD pins on the *PIC15F1823*. 
+Pictured above (*Fig. 1*) is a close-up shot of the low-voltage logic board found in the Leviton *IPHS5-1LW*. The larger 14-pin IC in the top-right is the *PIC16F1823*. From this image, we can see several empty through-hole pads used as test points in the factory where the board is assembled. These can be useful as probing points, as some of these have traces leading directly to the SMD pads on the *PIC15F1823*. 
 
-Of course, [the datasheet](https://ww1.microchip.com/downloads/en/DeviceDoc/PIC12LF1822-16LF1823-Data-Sheet-40001413F.pdf) will tell us everything we need to know about each of the the I/O pins, as shown in the following diagram and chart pulled from the datasheet:
+Of course, [the datasheet](https://ww1.microchip.com/downloads/en/DeviceDoc/PIC12LF1822-16LF1823-Data-Sheet-40001413F.pdf) will tell us everything we need to know about each of the the I/O pins, as shown in the following diagram and pin allocation chart pulled from the datasheet:
 
 ![]({{ site.baseurl }}/assets/img/2022/Hacking-Leviton-Fan-Humidity-Switch/05_15_2022_06-min.jpg)
 *Fig. 2 - PIC16F1823 pinout*
@@ -52,7 +52,7 @@ To locate the pins that control the fan and the button, I used my digital multim
 ![]({{ site.baseurl }}/assets/img/2022/Hacking-Leviton-Fan-Humidity-Switch/05_15_2022_03-min.jpg)
 *Exposing the logic board while circuit is powered*
 
-After careful probing, I found the fan control logic output at `RC5`. This pin normally outputs 0.0v `(LOW)` while the fan is off, and outputs 3.3v `(HIGH)` when the fan is running. After further careful probing, I found the button logic pin at `RA0`. This pin normally outputs 3.3v `(HIGH)`, and changes to 0.0v `(LOW)` when the button is closed/depressed. 
+After careful probing, I found the fan control logic output at `RC5`. This pin normally outputs 0.0v `(LOW)` while the fan is off, and outputs 3.3v `(HIGH)` when the fan is running. After further careful probing, I found the button logic pin at `RA0`. This pin normally outputs 3.3v `(HIGH)`, and changes to 0.0v `(LOW)` (short to ground) when the button is closed/depressed. 
 
 ![]({{ site.baseurl }}/assets/img/2022/Hacking-Leviton-Fan-Humidity-Switch/05_15_2022_08-min.jpg)
 *Fig. 4 - Labeled traces on the PIC16F1823 chip*
@@ -61,16 +61,16 @@ With the logic found and analyzed, it's time to move on to the next step: solder
 
 ## Soldering in wires
 
-For modularity's sake, I opted to use rectangular male pin header jumper ribbon (with one end cut off for board soldering) to connect to the logic board. These male header pins will be accessible through the side of the black plastic case that houses the logic and relay board in the IPHS5-1LW (making use of the factory cutout). 
+For modularity's sake, and to speed up testing, I opted to use a rectangular male pin header jumper ribbon cable (with one end cut off for board soldering) to connect to the logic board. These male header pins will be accessible through the side of the black plastic case that houses the logic and relay board in the *IPHS5-1LW* (making use of the factory cutout). 
 
 ![]({{ site.baseurl }}/assets/img/2022/Hacking-Leviton-Fan-Humidity-Switch/05_15_2022_04-min.jpg)
 *Holding the circuit and mod wires using helping-hand clamps*
 
-After careful soldering to `VSS`, `VDD` and `RA0` via the through-hole pads, as well as `RC5` via direct solder to the SMD pin of the IC, our little ribbon header is ready for action. All that's left is to re-assemble the case and start interfacing with the switch.
+After careful soldering to `VSS`, `VDD` and `RA0` via the through-hole pads, as well as `RC5` via direct solder to the SMD pin of the IC, our little header cable is ready for action. All that's left is to re-assemble the case and start interfacing with the switch.
 
 ## Buttoning it up
 
-Voilà! The Leviton *IPHS5-1LW* switch is fully re-assembled and with exposed headers to leads `VSS` (3v3), `VDD` (ground), `RA0` (button), and `RC5` (fan relay driver) on the *PIC15F1823* microcontroller.
+And voilà— The Leviton *IPHS5-1LW* switch is fully re-assembled and with exposed headers to leads `VSS` (3v3), `VDD` (ground), `RA0` (button), and `RC5` (fan relay driver) from the *PIC15F1823* microcontroller.
 
 ![]({{ site.baseurl }}/assets/img/2022/Hacking-Leviton-Fan-Humidity-Switch/05_15_2022_05-min.jpg)
 *The fully packaged IPHS5-1LW with modded signal wires added*
@@ -79,7 +79,7 @@ With the relevant logic channels exposed, the next step is to use the exposed ch
 
 ## To be continued...
 
-> This guide will be expanded to include *ESP8266* programming and adding Wi-Fi control at some point in the future. Check back soon.
+> As of May 2022 this project is under active development. This guide will be expanded to include *ESP8266* programming and adding Wi-Fi control at some point in the future. Check back soon.
 {: .prompt-tip }
 
 ## Refrences
