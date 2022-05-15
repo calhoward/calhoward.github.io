@@ -12,16 +12,16 @@ image: https://calhoward.com/assets/img/2022/Hacking-Leviton-Fan-Humidity-Switch
 >**DANGER!**  This guide involves working with high voltage AC wiring. Do not attempt to perform manual wiring on any of the circuits in your home. This guide is intended solely for educational use. 
 {: .prompt-danger }
 
-The [Leviton](https://www.leviton.com) [IPHS5-1LW In-Wall Humidity Sensor & Fan Control](https://www.leviton.com/en/products/iphs5-1lw) is a neat, novel method of controlling your bathroom fan. The humidity sensor turns the fan on when humidity is sensed, and then shuts off when ambient humidity returns to normal. This is certainly useful as a modern convenicence, as well as a clever energy-saving device. 
+The [Leviton](https://www.leviton.com) [IPHS5-1LW In-Wall Humidity Sensor & Fan Control](https://www.leviton.com/en/products/iphs5-1lw) is a neat, novel method of controlling your bathroom fan. Its built-in humidity sensor turns the fan on when humidity is sensed, and then shuts it off when ambient humidity returns to normal (i.e. when the room steams up from a shower). This is certainly useful as a modern convenicence, as well as a clever energy-saving device. 
 
-As dandy as this little switch is, it's smart, but it's not *smart*. By *smart*, I mean *internet-of-things* smart. Unfortunately, this device's automation routines are subject and limited to its own local decision-making, and cannot be externally influenced nor read from. Alas, this can be fixed.
+As dandy as this little switch is, it's smart, but it's not *smart* smart. By *smart* smart, I mean *internet-of-things* smart. Unfortunately, this device's automation routines are subject and limited to its own local decision-making, and cannot be externally influenced nor read from. Alas, this can be fixed:
 
 ![]({{ site.baseurl }}/assets/img/2022/pexels-anete-lusina-4790264 Cropped-min.jpg)
 *Photo credit - [Anete Lusina](https://www.pexels.com/@anete-lusina/)*
 
 With some reverse engineering and hacking, we can get this switch online and connected to our home automation server by integrating its logic with an [Espressif](https://www.espressif.com/) [ESP8266 Wi-Fi MCU](https://www.espressif.com/en/products/socs/esp8266) . Once connected, we can even interface with it using smart assistants like Alexa, Siri, and Google Home. 
 
-This guide will explain the steps I went through in reverse engineering this switch and interfacing its logic with the *ESP8266* chip.
+This guide will explain the steps I went through in reverse engineering the Leviton *IPHS5-1LW* and interfacing its logic with the *ESP8266* chip.
 
 ## Analyzing the board
 
@@ -44,7 +44,7 @@ This key shows us where the power pins, `VSS` (voltage source) and `VDD` (voltag
 
 ## Probing the circuit
 
->**DANGER!**  Exposing live high voltage AC house wiring while also exposing live, disassembled AC wiring devices is extremely **dangerous** and possibly **lethal**. Do not do this.
+>**DANGER!**  Exposing live high voltage AC house wiring while also exposing live disassembled AC wiring devices is extremely **dangerous** and possibly **lethal**. Do not do this.
 {: .prompt-danger }
 
 To locate the pins that control the fan and the button, I used my digital multimeter set to DC voltage to listen for the 3.3v logic on each general-purpose I/O pin, taking note of which pin I'm on by refrencing the pinout diagram and pin allocation diagram. 
