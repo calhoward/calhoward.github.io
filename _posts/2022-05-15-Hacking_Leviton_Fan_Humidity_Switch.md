@@ -71,7 +71,7 @@ For modularity's sake, and to speed up testing, I opted to use a rectangular mal
 ![]({{ site.baseurl }}/assets/img/2022/Hacking-Leviton-Fan-Humidity-Switch/05_15_2022_04-min.jpg)
 *Pictured - Holding the circuit and mod wires using helping-hand clamps*
 
-After careful soldering to `VSS`, `VDD` and `RA0` via the through-hole pads, as well as `RC5` via direct solder to the SMT pin of the IC, our little header cable is almost ready for action. All that's left is carefully to re-assemble the case, securing the cable tightly and taping where necessary.
+After careful soldering to `VSS`, `VDD` and `RA0` via the through-hole pads, as well as `RC5` via direct solder to the SMT pin of the IC, our little header cable is almost ready for action. All that's left is to carefully re-assemble the case, securing the cable tightly and taping where necessary.
 
 ## Buttoning it up
 
