@@ -19,7 +19,7 @@ As dandy as this little switch is, it's smart, but it's not *smart* smart. By *s
 ![]({{ site.baseurl }}/assets/img/2022/pexels-anete-lusina-4790264 Cropped-min.jpg)
 *Photo credit - [Anete Lusina](https://www.pexels.com/@anete-lusina/)*
 
-With some reverse engineering and hacking, we can get this switch online and connected to our home automation server by integrating its logic with an [Espressif](https://www.espressif.com/) [ESP8266 Wi-Fi MCU](https://www.espressif.com/en/products/socs/esp8266) . Once connected, we can even interface with it using smart assistants like Alexa, Siri, and Google Home. 
+With some reverse engineering and hacking, we can get this switch online and connected to our home automation server by integrating its logic with an [Espressif](https://www.espressif.com/) [ESP8266 Wi-Fi MCU](https://www.espressif.com/en/products/socs/esp8266) . Once connected, we can even interface with it with smart assistants like Alexa, Siri, and Google Home. 
 
 This guide will explain the steps I went through in reverse engineering the Leviton *IPHS5-1LW* and interfacing its logic with the *ESP8266* chip.
 
@@ -30,7 +30,9 @@ The first step in reverse-engineering a circuit is to take a glance at the board
 ![]({{ site.baseurl }}/assets/img/2022/Hacking-Leviton-Fan-Humidity-Switch/05_15_2022_02-min.jpg)
 *Fig. 1 - Photo of the IPHS5-1LW logic board*
 
-Pictured above (*Fig. 1*) is a close-up shot of the low-voltage logic board found in the Leviton *IPHS5-1LW*. The larger 14-pin IC in the top-right is the *PIC16F1823*. From this image, we can see several empty through-hole pads used as test points in the factory where the board is assembled. These can be useful as probing points, as some of these have traces leading directly to the SMD pads on the *PIC15F1823*. 
+Pictured above (*Fig. 1*) is a close-up shot of the low-voltage logic board found in the Leviton *IPHS5-1LW*. The larger 14-pin SMT IC, in the top-right quadrant of the board, is our target: the *PIC16F1823*. 
+
+From this image, we can see several empty through-hole pads used as test points in the factory where the board is assembled. These can be useful as probing points, as some of these have traces leading directly to the SMT pads on the *PIC15F1823*. 
 
 Of course, [the datasheet](https://ww1.microchip.com/downloads/en/DeviceDoc/PIC12LF1822-16LF1823-Data-Sheet-40001413F.pdf) will tell us everything we need to know about each of the the I/O pins, as shown in the following diagram and pin allocation chart pulled from the datasheet:
 
@@ -44,7 +46,7 @@ This key shows us where the power pins, `VSS` (voltage source) and `VDD` (voltag
 
 ## Probing the circuit
 
->**DANGER!**  Exposing live high voltage AC house wiring while also exposing live disassembled AC wiring devices is extremely **dangerous** and possibly **lethal**. Do not do this.
+>**DANGER!**  Exposing live high voltage AC house wiring while also exposing live disassembled AC wiring devices is extremely **hazardous** and possibly **lethal**. Do not do this.
 {: .prompt-danger }
 
 To locate the pins that control the fan and the button, I used my digital multimeter set to DC voltage to listen for the 3.3v logic on each general-purpose I/O pin, taking note of which pin I'm on by refrencing the pinout diagram and pin allocation diagram. 
@@ -66,7 +68,7 @@ For modularity's sake, and to speed up testing, I opted to use a rectangular mal
 ![]({{ site.baseurl }}/assets/img/2022/Hacking-Leviton-Fan-Humidity-Switch/05_15_2022_04-min.jpg)
 *Holding the circuit and mod wires using helping-hand clamps*
 
-After careful soldering to `VSS`, `VDD` and `RA0` via the through-hole pads, as well as `RC5` via direct solder to the SMD pin of the IC, our little header cable is ready for action. All that's left is to re-assemble the case and start interfacing with the switch.
+After careful soldering to `VSS`, `VDD` and `RA0` via the through-hole pads, as well as `RC5` via direct solder to the SMT pin of the IC, our little header cable is ready for action. All that's left is to re-assemble the case and start interfacing with the switch.
 
 ## Buttoning it up
 
