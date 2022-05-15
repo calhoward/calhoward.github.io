@@ -15,20 +15,20 @@ image: https://calhoward.com/assets/img/2022/Hacking-Leviton-Fan-Humidity-Switch
 >This post is a WIP, check back soon!
 {: .prompt-tip }
 
-The [Leviton](https://www.leviton.com) [*IPHS5-1LW* in-wall humidity sensor & fan control](https://www.leviton.com/en/products/iphs5-1lw) is a neat, novel method of controlling your bathroom fan. The humidity sensor turns the fan on when humidity is sensed, and then shuts off when ambient humidity returns to normal. This is certainly useful as a modern convenicence, as well as a clever energy-saving device. 
+The [Leviton](https://www.leviton.com) [IPHS5-1LW In-Wall Humidity Sensor & Fan Control](https://www.leviton.com/en/products/iphs5-1lw) is a neat, novel method of controlling your bathroom fan. The humidity sensor turns the fan on when humidity is sensed, and then shuts off when ambient humidity returns to normal. This is certainly useful as a modern convenicence, as well as a clever energy-saving device. 
 
 As dandy as this little switch is, it's smart, but it's not *smart*. By *smart*, I mean *internet-of-things* smart. Unfortunately, this device's automation routines are subject and limited to its own local decision-making, and cannot be externally influenced nor read from. Alas, this can be fixed.
 
 ![]({{ site.baseurl }}/assets/img/2022/pexels-anete-lusina-4790264 Cropped-min.jpg)
 *Photo credit - [Anete Lusina](https://www.pexels.com/@anete-lusina/)*
 
-With some reverse engineering and hacking, we can get this switch online and connected to our home automation server by integrating its logic with an [Espressif](https://www.espressif.com/) *[ESP8266](https://www.espressif.com/en/products/socs/esp8266)* Wi-Fi MCU. Once connected, we can even interface with it using smart assistants like Alexa, Siri, and Google Home. 
+With some reverse engineering and hacking, we can get this switch online and connected to our home automation server by integrating its logic with an [Espressif](https://www.espressif.com/) [ESP8266 Wi-Fi MCU](https://www.espressif.com/en/products/socs/esp8266) . Once connected, we can even interface with it using smart assistants like Alexa, Siri, and Google Home. 
 
 This guide will explain the steps I went through in reverse engineering this switch and interfacing its logic with the *ESP8266* chip.
 
 ## Analyzing the board
 
-The first step in reverse-engineering a circuit is to take a glance at the board and find the main logic ICs. In this case, I identified the [Microchip](https://www.microchip.com/) *[PIC16F1823](https://www.digikey.com/en/products/detail/microchip-technology/PIC16F1823-I-SL/2258580)* 8-bit microcontroller IC as the main logic processor used in the Leviton *IPHS5-1LW* switch. The *PIC16F1823* will be our main target for analyzing and hacking the circuit's logic.
+The first step in reverse-engineering a circuit is to take a glance at the board and find the main logic ICs. In this case, I identified the [Microchip](https://www.microchip.com/) [PIC16F1823 8-bit microcontroller IC](https://www.digikey.com/en/products/detail/microchip-technology/PIC16F1823-I-SL/2258580)  as the main logic processor used in the Leviton *IPHS5-1LW* switch. The *PIC16F1823* will be our main target for analyzing and hacking the circuit's logic.
 
 ![]({{ site.baseurl }}/assets/img/2022/Hacking-Leviton-Fan-Humidity-Switch/05_15_2022_02-min.jpg)
 *Fig. 1 - Photo of the IPHS5-1LW logic board*
@@ -78,7 +78,7 @@ Voilà! The Leviton *IPHS5-1LW* switch is fully re-assembled and with exposed he
 ![]({{ site.baseurl }}/assets/img/2022/Hacking-Leviton-Fan-Humidity-Switch/05_15_2022_05-min.jpg)
 *The fully packaged IPHS5-1LW with modded signal wires added*
 
-With the relevant logic channels exposed, the next step is to use the exposed channels to interface with an *[ESP8266](https://www.espressif.com/en/products/socs/esp8266)* board in order to achieve control of the circuit via Wi-Fi. 
+With the relevant logic channels exposed, the next step is to use the exposed channels to interface with an Espressif *ESP8266* board in order to achieve control of the circuit via Wi-Fi. 
 
 ## To be continued...
 
