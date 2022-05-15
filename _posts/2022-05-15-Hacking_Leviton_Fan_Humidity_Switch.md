@@ -36,15 +36,21 @@ This key shows us where the power pins, `VSS` (voltage source) and `VDD` (voltag
 
 ## Probing the circuit
 
-![]({{ site.baseurl }}/assets/img/2022/Hacking-Leviton-Fan-Humidity-Switch/05_15_2022_03-min.jpg)
-*Exposing the logic board while circuit is powered*
-
 >!! DANGER !! Exposing live house wiring while also exposing live, disassembled AC wiring devices is extremely dangerous *and possibly lethal*. Do not do this.
 {: .prompt-danger }
 
+![]({{ site.baseurl }}/assets/img/2022/Hacking-Leviton-Fan-Humidity-Switch/05_15_2022_03-min.jpg)
+*Exposing the logic board while circuit is powered*
+
+To locate the pins that control the fan and the button, I used my digital multimeter set to DC voltage to listen for the 3.3v logic on each general-purpose I/O pin, taking note of which pin I'm on by refrencing the pinout diagram and pin allocation diagram. 
+
+After careful probing, I found the fan control logic output at `RC5`. This pin normally outputs 0.0v (`low`) while the fan is off, and outputs 3.3v (`high`) when the fan is running. After further careful probing, I found the button logic pin at `RA0`. This pin normally outputs 3.3v (`high`), and changes to 0.0v (`low`) when the button is closed/depressed. 
+
+With the logic found and analyzed, it's time to move on to the next step, soldering in our mod wires.
+
 ## Soldering in wires
 
-For ease and for modularity's sake, I opted to use male pin header jumper wires with bare copper ends to connect to the logic board. These male header pins will be ran out through the side of the black plastic case, making use of the factory cutout. 
+For ease and for modularity's sake, I opted to use male pin header jumper wires (with one end cut off for board soldering) to connect to the logic board. These male header pins will be ran out through the side of the black plastic case that houses the logic and relay board in the IPHS5-1LW, making use of the factory cutout. 
 
 ![]({{ site.baseurl }}/assets/img/2022/Hacking-Leviton-Fan-Humidity-Switch/05_15_2022_04-min.jpg)
 *Holding the circuit and mod wires using helping-hand clamps*
