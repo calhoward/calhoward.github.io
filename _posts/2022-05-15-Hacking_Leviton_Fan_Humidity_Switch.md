@@ -1,6 +1,6 @@
 ---
 title: Hacking the Leviton In-Wall Humidity Sensor & Fan Control
-date: 2022-05-15 13:00:00 +/-TTTT
+date: 2022-05-15 12:00:00 +/-TTTT
 image: https://calhoward.com/assets/img/2022/Hacking-Leviton-Fan-Humidity-Switch/05_15_2022_01-min.jpg
 ---
 
