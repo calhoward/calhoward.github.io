@@ -1,5 +1,5 @@
 ---
-title: Hacking the Leviton In-Wall Humidity Sensor & Fan Control
+title: Hacking the Leviton IPHS5-1LW In-Wall Humidity Sensor & Fan Control and Adding WiFi Connectivity & Control
 date: 2022-05-15 12:00:00 +/-TTTT
 image: https://calhoward.com/assets/img/2022/Hacking-Leviton-Fan-Humidity-Switch/05_15_2022_01-min.jpg
 ---
