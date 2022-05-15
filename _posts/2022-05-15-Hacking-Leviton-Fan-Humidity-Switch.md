@@ -39,3 +39,4 @@ image: https://calhoward.com/assets/img/2022/Hacking-Leviton-Fan-Humidity-Switch
 ## Refrences
 
 [PIC16F1823 on DigiKey](https://www.digikey.com/en/products/detail/microchip-technology/PIC16F1823-I-SL/2258580)
+[IPHS5-1LW on Leviton](https://www.leviton.com/en/products/iphs5-1lw)
