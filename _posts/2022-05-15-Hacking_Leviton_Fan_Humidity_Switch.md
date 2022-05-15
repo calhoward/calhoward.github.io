@@ -84,7 +84,7 @@ With the relevant logic channels exposed, the next step is to use the exposed ch
 
 ## To be continued...
 
-> As of May 2022 this project is under active development. This guide will be expanded to include *ESP8266* programming and adding Wi-Fi control at some point in the future. Check back soon.
+> As of May 2022 this project is under active development. This guide will be expanded to include *ESP8266* programming and adding Wi-Fi control at some point in the future. Check back soon, or check [the project's Github page](https://github.com/calhoward/ESP8266-IPHS5-1LW) for updates.
 {: .prompt-tip }
 
 ## Refrences
