@@ -15,9 +15,12 @@ image: https://calhoward.com/assets/img/2022/Hacking-Leviton-Fan-Humidity-Switch
 >This post is a WIP, check back soon!
 {: .prompt-tip }
 
-The *[Leviton IPHS5-1LW In-Wall Humidity Sensor & Fan Control](https://www.leviton.com/en/products/iphs5-1lw)* is a neat, novel method of controlling your bathroom fan. Its selling feature is its humidity sensor and timing logic, allowing this switch to automatically kick on your fan when it senses a presence of humidity above a certain threshold, i.e. when your bathroom steams up from a running shower. The humidity sensor only turns the fan on when it is needed, and then shuts off when air humidity return to normal. This is certainly useful as a modern convenicence, as well as a clever energy-saving device. 
+The *[Leviton IPHS5-1LW In-Wall Humidity Sensor & Fan Control](https://www.leviton.com/en/products/iphs5-1lw)* is a neat, novel method of controlling your bathroom fan. The humidity sensor only turns the fan on when it is needed, and then shuts off when air humidity return to normal. This is certainly useful as a modern convenicence, as well as a clever energy-saving device. 
 
-As dandy as this little switch is, it's smart, but it's not *smart*. By *smart*, I mean *internet-of-things* smart. Unfortunately, this device's automation routines are subject and limited to its own local decision-making, and cannot be externally influenced nor read from. As of May of 2022, I am unable to find similar switches on the market that come with Wi-Fi IOT technology. That is okay, because with some reverse engineering and hacking, we can get this switch online and connected to our home automation server by integrating its logic with an *[ESP8266 Wi-Fi MCU](https://www.espressif.com/en/products/socs/esp8266)*. Once connected, we can even interface with it using smart assistants like Alexa, Siri, and Google Home. 
+As dandy as this little switch is, it's smart, but it's not *smart*. By *smart*, I mean *internet-of-things* smart. Unfortunately, this device's automation routines are subject and limited to its own local decision-making, and cannot be externally influenced nor read from. That is okay, because with some reverse engineering and hacking, we can get this switch online and connected to our home automation server by integrating its logic with an *[ESP8266 Wi-Fi MCU](https://www.espressif.com/en/products/socs/esp8266)*. Once connected, we can even interface with it using smart assistants like Alexa, Siri, and Google Home. 
+
+![]({{ site.baseurl }}/assets/img/2022/pexels-anete-lusina-4790264 Cropped-min.jpg)
+*Photo credit - [Anete Lusina](https://www.pexels.com/@anete-lusina/)*
 
 Due to the hazards present in working with home wiring, and exposing bare circuit boards connected to live house wiring, this guide is intended for use only as educational material. The steps listed in this guide should not be followed by anyone not qualified to work with home wiring. Basically, if you are not an electrician, you should not be doing any of this. 
 
@@ -25,7 +28,7 @@ Now, with critical danger warnings aside, follow along for the guide on how I ha
 
 ## Analyzing the board
 
-The first step in reverse-engineering a circuit is to take a glance at the board and find the main logic ICs. In this case, I identified the *[Microchip](https://www.microchip.com/) [PIC16F1823 8-bit microcontroller IC](https://www.digikey.com/en/products/detail/microchip-technology/PIC16F1823-I-SL/2258580)* as the main logic processor used in the *IPHS5-1LW*. For this project, the PIC16F1823 will be our target for analyzing the circuit's logic, as well as tapping into and controlling its I/O.
+The first step in reverse-engineering a circuit is to take a glance at the board and find the main logic ICs. In this case, I identified the *[Microchip](https://www.microchip.com/) [PIC16F1823 8-bit microcontroller IC](https://www.digikey.com/en/products/detail/microchip-technology/PIC16F1823-I-SL/2258580)* as the main logic processor used in the Leviton *IPHS5-1LW*. For this project, the *PIC16F1823* will be our target for analyzing the circuit's logic, as well as tapping into and controlling its I/O.
 
 ![]({{ site.baseurl }}/assets/img/2022/Hacking-Leviton-Fan-Humidity-Switch/05_15_2022_02-min.jpg)
 *Fig. 1 - Photo of the IPHS5-1LW logic board*
