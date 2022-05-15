@@ -15,7 +15,7 @@ image: https://calhoward.com/assets/img/2022/Hacking-Leviton-Fan-Humidity-Switch
 >**DANGER!**  Do not disassemble AC wiring devices as even de-energized devices may store some lethal energy in their components. 
 {: .prompt-danger }
 
-The [Leviton](https://www.leviton.com) [IPHS5-1LW In-Wall Humidity Sensor & Fan Control](https://www.leviton.com/en/products/iphs5-1lw) is a neat and novel method of controlling your bathroom fan. Its built-in humidity sensor turns the fan on when humidity is sensed, and then shuts it off when ambient humidity returns to normal (e.g. when the room steams up from a hot shower). This is certainly useful as a modern convenicence, as well as it is a clever energy-saving device. 
+The [Leviton](https://www.leviton.com) [IPHS5-1LW In-Wall Humidity Sensor & Fan Control](https://www.leviton.com/en/products/iphs5-1lw) is a neat and novel method of controlling your bathroom fan. Its built-in humidity sensor turns the fan on when humidity is sensed, and then shuts it off when ambient humidity returns to normal (e.g. when the room steams up from a hot shower). This is certainly useful as a modern convenience, as well as it is a clever energy-saving device. 
 
 As dandy as this little switch is, it's smart, but it's not *smart* smart. By *smart* smart, I mean *[internet-of-things](https://en.wikipedia.org/wiki/Internet_of_things)* smart. Unfortunately, this device's automation routines are subject and limited to its own local decision-making, and cannot be externally influenced nor read from. Alas, this can be fixed:
 
