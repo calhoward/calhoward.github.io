@@ -1,5 +1,5 @@
 ---
-title: Hacking the Leviton IPHS5-1LW In-Wall Humidity Sensor & Fan Control and Adding Wi-Fi Connectivity & Control
+title: Hacking the Leviton IPHS5-1LW In-Wall Humidity Sensor & Fan Control
 date: 2022-05-15 12:00:00 +/-TTTT
 image: https://calhoward.com/assets/img/2022/Hacking-Leviton-Fan-Humidity-Switch/05_15_2022_01-min.jpg
 ---
@@ -9,7 +9,7 @@ image: https://calhoward.com/assets/img/2022/Hacking-Leviton-Fan-Humidity-Switch
 
 ## Introduction
 
->!! DANGER !! This guide involves working with AC mains voltage wiring. Do not attempt to perform manual wiring on any of the circuits in your home. This guide is intended solely for educational purposes. 
+>!! DANGER !! This guide involves working with AC mains voltage wiring. Do not attempt to perform manual wiring on any of the circuits in your home. This guide is intended solely for educational use. 
 {: .prompt-danger }
 
 >This post is a WIP, check back soon!
@@ -17,14 +17,12 @@ image: https://calhoward.com/assets/img/2022/Hacking-Leviton-Fan-Humidity-Switch
 
 The *[Leviton IPHS5-1LW In-Wall Humidity Sensor & Fan Control](https://www.leviton.com/en/products/iphs5-1lw)* is a neat, novel method of controlling your bathroom fan. The humidity sensor only turns the fan on when it is needed, and then shuts off when air humidity return to normal. This is certainly useful as a modern convenicence, as well as a clever energy-saving device. 
 
-As dandy as this little switch is, it's smart, but it's not *smart*. By *smart*, I mean *internet-of-things* smart. Unfortunately, this device's automation routines are subject and limited to its own local decision-making, and cannot be externally influenced nor read from. That is okay, because with some reverse engineering and hacking, we can get this switch online and connected to our home automation server by integrating its logic with an *[ESP8266 Wi-Fi MCU](https://www.espressif.com/en/products/socs/esp8266)*. Once connected, we can even interface with it using smart assistants like Alexa, Siri, and Google Home. 
+As dandy as this little switch is, it's smart, but it's not *smart*. By *smart*, I mean *internet-of-things* smart. Unfortunately, this device's automation routines are subject and limited to its own local decision-making, and cannot be externally influenced nor read from. 
 
 ![]({{ site.baseurl }}/assets/img/2022/pexels-anete-lusina-4790264 Cropped-min.jpg)
 *Photo credit - [Anete Lusina](https://www.pexels.com/@anete-lusina/)*
 
-Due to the hazards present in working with home wiring, and exposing bare circuit boards connected to live house wiring, this guide is intended for use only as educational material. The steps listed in this guide should not be followed by anyone not qualified to work with home wiring. Basically, if you are not an electrician, you should not be doing any of this. 
-
-Now, with critical danger warnings aside, follow along for the guide on how I hacked my *Leviton IPHS5-1LW*.
+With some reverse engineering and hacking, we can get this switch online and connected to our home automation server by integrating its logic with an [ESP8266](https://www.espressif.com/en/products/socs/esp8266) Wi-Fi MCU. Once connected, we can even interface with it using smart assistants like Alexa, Siri, and Google Home. 
 
 ## Analyzing the board
 
@@ -56,6 +54,9 @@ To locate the pins that control the fan and the button, I used my digital multim
 *Exposing the logic board while circuit is powered*
 
 After careful probing, I found the fan control logic output at `RC5`. This pin normally outputs 0.0v (`LOW`) while the fan is off, and outputs 3.3v (`HIGH`) when the fan is running. After further careful probing, I found the button logic pin at `RA0`. This pin normally outputs 3.3v (`HIGH`), and changes to 0.0v (`LOW`) when the button is closed/depressed. 
+
+![]({{ site.baseurl }}/assets/img/2022/Hacking-Leviton-Fan-Humidity-Switch/05_15_2022_08-min.jpg)
+*Fig. 4 - Labeled traces on the PIC16F1823 chip*
 
 With the logic found and analyzed, it's time to move on to the next step, soldering in our mod wires.
 
