@@ -27,10 +27,10 @@ Pictured above (*Fig. 1*) is a close-up shot of the low-voltage logic board foun
 Of course, the [datasheet](https://ww1.microchip.com/downloads/en/DeviceDoc/PIC12LF1822-16LF1823-Data-Sheet-40001413F.pdf) will tell us everything we need to know about each of the the I/O pins, as shown in the following diagram and chart pulled from the datasheet:
 
 ![]({{ site.baseurl }}/assets/img/2022/Hacking-Leviton-Fan-Humidity-Switch/05_15_2022_06-min.jpg)
-*PIC16F1823 pinout*
+*Fig. 2 - PIC16F1823 pinout*
 
 ![]({{ site.baseurl }}/assets/img/2022/Hacking-Leviton-Fan-Humidity-Switch/05_15_2022_07-min.jpg)
-*PIC16F1823 pin allocation table*
+*Fig. 3 - PIC16F1823 pin allocation table*
 
 This key shows us where the power pins, `VSS` (voltage source) and `VDD` (voltage drain), are located. From here, we just need to isolate the pins that are responsible for the logic of the relay driver and for the logic of the activation button. To do this, we will have to test probe the circuit while it is live.
 
@@ -39,10 +39,10 @@ This key shows us where the power pins, `VSS` (voltage source) and `VDD` (voltag
 >!! DANGER !! Exposing live house wiring while also exposing live, disassembled AC wiring devices is extremely dangerous *and possibly lethal*. Do not do this.
 {: .prompt-danger }
 
+To locate the pins that control the fan and the button, I used my digital multimeter set to DC voltage to listen for the 3.3v logic on each general-purpose I/O pin, taking note of which pin I'm on by refrencing the pinout diagram and pin allocation diagram. 
+
 ![]({{ site.baseurl }}/assets/img/2022/Hacking-Leviton-Fan-Humidity-Switch/05_15_2022_03-min.jpg)
 *Exposing the logic board while circuit is powered*
-
-To locate the pins that control the fan and the button, I used my digital multimeter set to DC voltage to listen for the 3.3v logic on each general-purpose I/O pin, taking note of which pin I'm on by refrencing the pinout diagram and pin allocation diagram. 
 
 After careful probing, I found the fan control logic output at `RC5`. This pin normally outputs 0.0v (`low`) while the fan is off, and outputs 3.3v (`high`) when the fan is running. After further careful probing, I found the button logic pin at `RA0`. This pin normally outputs 3.3v (`high`), and changes to 0.0v (`low`) when the button is closed/depressed. 
 
@@ -59,12 +59,16 @@ After careful soldering to `VSS`, `VDD` and `RA0` via the through-hole pads, as 
 
 ## Buttoning it up
 
-Voilà! The IPHS5-1LW is fully re-assembled and with exposed hookups to leads `3V3`, `GND`, `BTN`, and `FAN` on the PIC15F1823 microcontroller.
+Voilà! The IPHS5-1LW is fully re-assembled and with exposed headers to leads `VSS` (3v3), `VDD` (ground), `RA0` (button), and `RC5` (fan relay driver)on the PIC15F1823 microcontroller.
 
 ![]({{ site.baseurl }}/assets/img/2022/Hacking-Leviton-Fan-Humidity-Switch/05_15_2022_05-min.jpg)
 *The fully packaged IPHS5-1LW with modded signal wires added*
 
 With the relevant logic channels exposed, the next step is to use the exposed channels to interface with an [ESP8266](https://www.espressif.com/en/products/socs/esp8266) board in order to achieve control of the circuit via WiFi. 
+
+## To be continued...
+
+This guide will be expanded to include ESP8266 programming and adding WiFi control in the future. Check back soon.
 ## Refrences
 
 [PIC16F1823 on DigiKey](https://www.digikey.com/en/products/detail/microchip-technology/PIC16F1823-I-SL/2258580)
