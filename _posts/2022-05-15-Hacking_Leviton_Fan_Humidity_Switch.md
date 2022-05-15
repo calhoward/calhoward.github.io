@@ -9,7 +9,7 @@ image: https://calhoward.com/assets/img/2022/Hacking-Leviton-Fan-Humidity-Switch
 
 ## Introduction
 
->**DANGER** This guide involves working with AC mains voltage wiring. Do not attempt to perform manual wiring on any of the circuits in your home. This guide is intended solely for educational use. 
+>**DANGER!**  This guide involves working with high voltage AC wiring. Do not attempt to perform manual wiring on any of the circuits in your home. This guide is intended solely for educational use. 
 {: .prompt-danger }
 
 The [Leviton](https://www.leviton.com) [IPHS5-1LW In-Wall Humidity Sensor & Fan Control](https://www.leviton.com/en/products/iphs5-1lw) is a neat, novel method of controlling your bathroom fan. The humidity sensor turns the fan on when humidity is sensed, and then shuts off when ambient humidity returns to normal. This is certainly useful as a modern convenicence, as well as a clever energy-saving device. 
@@ -44,7 +44,7 @@ This key shows us where the power pins, `VSS` (voltage source) and `VDD` (voltag
 
 ## Probing the circuit
 
->**DANGER** Exposing live house wiring while also exposing live, disassembled AC wiring devices is extremely dangerous *and possibly lethal*. Do not do this.
+>**DANGER!**  Exposing live high voltage AC house wiring while also exposing live, disassembled AC wiring devices is extremely **dangerous** and possibly **lethal**. Do not do this.
 {: .prompt-danger }
 
 To locate the pins that control the fan and the button, I used my digital multimeter set to DC voltage to listen for the 3.3v logic on each general-purpose I/O pin, taking note of which pin I'm on by refrencing the pinout diagram and pin allocation diagram. 
