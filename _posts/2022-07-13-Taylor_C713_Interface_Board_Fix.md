@@ -82,26 +82,26 @@ The plan: to re-arrange the outputs of the IC in such a way that they command th
 
 For clarity, here is a diagram of how the outputs come configured on the stock circuit board:
 
-![]({{ site.baseurl }}/assets/img/2022/Taylor-C713-Interface-Board-Fix/07_13_2022_08-min.jpg)
+![]({{ site.baseurl }}/assets/img/2022/Taylor-C713-Interface-Board-Fix/07_13_2022_09-min.jpg)
 *Fig. 6 - Current output configuration*
 
 And here is a diagram of how I planned on re-arranging the outputs:
 
-![]({{ site.baseurl }}/assets/img/2022/Taylor-C713-Interface-Board-Fix/07_13_2022_08-min.jpg)
+![]({{ site.baseurl }}/assets/img/2022/Taylor-C713-Interface-Board-Fix/07_13_2022_10-min.jpg)
 *Fig. 7 - Re-arranged output configuration*
 
 ## The procedure
 
 I got to work immediately. The first order of business was to sever all of the traces from the output side of the *ULN20803A* leading to the optocouplers. I did this carefully with a rotary hand tool, fitted with a cut-off wheel:
 
-![]({{ site.baseurl }}/assets/img/2022/Taylor-C713-Interface-Board-Fix/07_13_2022_09-min.jpg)
+![]({{ site.baseurl }}/assets/img/2022/Taylor-C713-Interface-Board-Fix/07_13_2022_11-min.jpg)
 *Fig. 8 - Close-up of the severed traces*
 
 With all the traces from the IC to the optocouplers severed, it's open season to re-arrange them any which way, as long as the known-to-be-fried outputs are avoided. 
 
 I used cut-up lengths of CAT-5 strands from a junk Ethernet cord for my mod wires. Here is an image after everything was fully soldered up:
 
-![]({{ site.baseurl }}/assets/img/2022/Taylor-C713-Interface-Board-Fix/07_13_2022_10-min.jpg)
+![]({{ site.baseurl }}/assets/img/2022/Taylor-C713-Interface-Board-Fix/07_13_2022_12-min.jpg)
 *Fig. 9 - The back of the 063926-SER Interface Base Board, modded*
 
 *Not pictured, I dabbed a bit of hot glue over each solder point for extra guarantee that none of the connections would be compromised or otherwise disrupted. *
@@ -114,7 +114,7 @@ I used cut-up lengths of CAT-5 strands from a junk Ethernet cord for my mod wire
 
 Whew. Look at that. The boards installed and ran perfectly. Great success! The machine dispensed delicious frozen yogurt. I filled a victory cup, as I always do (so I can "test" the machine), ceremoniously scarfed the whole thing, and ended up with brainfreeze. Regardless of frozen-dairy-inflicted cranial discomfort, I was ecstatic.
 
-![]({{ site.baseurl }}/assets/img/2022/Taylor-C713-Interface-Board-Fix/07_13_2022_11-min.jpg)
+![]({{ site.baseurl }}/assets/img/2022/Taylor-C713-Interface-Board-Fix/07_13_2022_13-min.jpg)
 *Pictured: Delicious frozen yogurt. Photo credit - [Fuse Frozen Co](https://www.facebook.com/fusefrozenco)*
 
 With a basic understanding of circuitry, and no money spent, I was able to successfully breathe new life into these interface boards. No waiting for parts to ship, no burden placed on the company's bottom line; a job well done. In the process, I learned quite a bit about how the C713 functions at its board logic level. I'm sure this knowledge will come in handy again in the future.
