@@ -125,9 +125,7 @@ Alas, with an understanding of circuitry, and no money spent, I was able to succ
 
 In the process, I learned quite a bit about how the C713 functions at its board logic level. I'm sure this knowledge will come in handy again in the future.
 
-Who knew it would be that simple? This is easily a hall-of-fame fix (for me). Please pass this write-up on if you found it interesting or helpful in any way. I can rest easy now, knowing that Taylor won't be profiting off their own broken products again (if I'm there to do anything about it). 
-
-Not today.
+Who knew it would be that simple? This is easily a hall-of-fame fix (for me). Please pass this write-up on if you found it interesting or helpful in any way. I can rest easy now, knowing that Taylor won't be profiting off their own broken products again (if I'm there to do anything about it, at least)— not today.
 
 
 
