@@ -117,12 +117,12 @@ Whew. Look at that. The boards installed and ran perfectly. Great success! The m
 ![]({{ site.baseurl }}/assets/img/2022/Taylor-C713-Interface-Board-Fix/07_13_2022_13-min.jpg)
 *Pictured: Delicious frozen yogurt. Photo credit - [Fuse Frozen Co](https://www.facebook.com/fusefrozenco)*
 
-With a basic understanding of circuitry, and no money spent, I was able to successfully breathe new life into these interface boards. No waiting for parts to ship, no burden placed on the company's bottom line; a job well done. In the process, I learned quite a bit about how the C713 functions at its board logic level. I'm sure this knowledge will come in handy again in the future.
+We may never know what fried both those boards. I'm assuming brown-outs or other power related issues due to inclement weather. Alas, with an understanding of circuitry, and no money spent, I was able to successfully breathe new life into these interface boards. No waiting for parts to ship, no burden placed on the company's bottom line; a job well done. In the process, I learned quite a bit about how the C713 functions at its board logic level. I'm sure this knowledge will come in handy again in the future.
 
-Who knew it would be that simple? This is easily a hall-of-fame fix (for me). Please pass this write-up on if you found it interesting or helpful in any way. I can rest easy now, knowing that Taylor won't be profiting off their own broken products again if I'm there to do anything about it. 
+Who knew it would be that simple? This is easily a hall-of-fame fix (for me). Please pass this write-up on if you found it interesting or helpful in any way. I can rest easy now, knowing that Taylor won't be profiting off their own broken products again (if I'm there to do anything about it). 
 
 Not today.
 
 
 
-*Shoutouts and thank you to [Fuse Frozen Co.](https://fusefrozenco.com/) for enlisting my help, and for granting permission to publish my findings in this write-up.*
+*Shout-outs and thank you to [Fuse Frozen Co.](https://fusefrozenco.com/) for enlisting my help, and for granting permission to publish my findings in this write-up.*
