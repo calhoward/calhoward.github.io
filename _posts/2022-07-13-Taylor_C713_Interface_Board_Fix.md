@@ -112,17 +112,17 @@ I used cut-up lengths of CAT-5 strands from a junk Ethernet cord for my mod wire
 
 ## Mission success
 
-Whew. Look at that. The boards installed and ran perfectly. Great success! The machine dispensed delicious frozen yogurt. I filled a victory cup, as I always do (so I can "test" the machine), ceremoniously scarfed the whole thing, and ended up with brainfreeze. Regardless of frozen dairy inflicting cranial discomfort, I was ecstatic.
+Whew. Look at that. The boards installed and ran perfectly. Great success! The machine dispensed delicious frozen yogurt. I filled a victory cup, as I always do (so I can "test" the machine), ceremoniously scarfed the whole thing, and ended up with brainfreeze. Regardless of frozen-dairy-inflicted cranial discomfort, I was ecstatic.
 
 ![]({{ site.baseurl }}/assets/img/2022/Taylor-C713-Interface-Board-Fix/07_13_2022_11-min.jpg)
 *Pictured: Delicious frozen yogurt. Photo credit - [Fuse Frozen Co](https://www.facebook.com/fusefrozenco)*
 
-With a basic understanding of circuitry, and no money spent, I was able to successfully breathe new life into these interface boards. No waiting for parts to ship, no burden placed on the company's bottom line; a job well done. 
+With a basic understanding of circuitry, and no money spent, I was able to successfully breathe new life into these interface boards. No waiting for parts to ship, no burden placed on the company's bottom line; a job well done. In the process, I learned quite a bit about how the C713 functions at its board logic level. I'm sure this knowledge will come in handy again in the future.
 
-Who knew it would be that simple? This is easily a hall-of-fame fix (for me). I can rest easy now, knowing that Taylor won't be profiting off their own broken products again, if I'm there to do anything about it. 
+Who knew it would be that simple? This is easily a hall-of-fame fix (for me). Please pass this write-up on if you found it interesting or helpful in any way. I can rest easy now, knowing that Taylor won't be profiting off their own broken products again if I'm there to do anything about it. 
 
 Not today.
 
 
 
-*Shoutout and thank you to [Fuse Frozen Co.](https://fusefrozenco.com/) for enlisting my help, and for granting permission to publish my findings in this write-up.*
+*Shoutouts and thank you to [Fuse Frozen Co.](https://fusefrozenco.com/) for enlisting my help, and for granting permission to publish my findings in this write-up.*
