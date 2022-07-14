@@ -114,7 +114,7 @@ I used cut-up lengths of CAT-5 strands from a junk Ethernet cord for my mod wire
 
 ## Mission success
 
-Whew. Look at that. The boards installed and ran perfectly. Great success! The machine dispensed delicious frozen yogurt. I filled a victory cup, as I always do (so I can "test" the machine), ceremoniously scarfed the whole thing, and ended up with brainfreeze. Regardless of frozen-dairy-inflicted cranial discomfort, I was ecstatic.
+Whew. Look at that. After rewiring, both boards installed and ran perfectly. Great success! The machine dispensed delicious frozen yogurt without a problem. I filled a victory cup, as I always do (so I can "test" the machine), ceremoniously scarfed the whole thing, and ended up with brainfreeze. Regardless of frozen-dairy-inflicted cranial discomfort, I was ecstatic.
 
 ![]({{ site.baseurl }}/assets/img/2022/Taylor-C713-Interface-Board-Fix/07_13_2022_13-min.jpg)
 *Pictured: Delicious frozen yogurt. Photo credit - [Fuse Frozen Co](https://www.facebook.com/fusefrozenco)*
