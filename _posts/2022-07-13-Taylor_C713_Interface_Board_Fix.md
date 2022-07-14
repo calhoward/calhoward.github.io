@@ -32,22 +32,22 @@ Time to get digging.
 
 ## Isolating the issue
 
-To solve issues on a soft serve machine, one must *think* like a soft serve machine. *Be* the soft serve machine. Okay, maybe soft serve machines don't have thoughts, but they do have hidden service menus. I entered my trusty access code, *5-2-3-1*, and accessed the "Manual Control" screen. 
+To solve issues on a soft serve machine, one must *think* like a soft serve machine. *Be* the soft serve machine. Okay, maybe soft serve machines don't have thoughts, but they do have hidden service menus: I entered my trusty access code, *5-2-3-1*, and accessed the "Manual Control" screen. 
 
-Unsurprisingly, the machine did not respect my commands as I instructed it to engage the left beater motor, nor disengage the right beater motor. *Cool*, I thought, *the machine has lost its mind*. It must be some combination of a shorted wire and blown fuse, maybe a bad relay, or contactor coil.
+Unsurprisingly, the machine did not respect my commands as I instructed it to engage the left beater motor (*the beater is responsible for dispensing the product*), nor would it disengage the right beater motor. *Cool*, I thought, *the machine has lost its mind*. It must be some combination of a shorted wire and blown fuse, maybe a bad relay, or bad contactor coil.
 
 ![]({{ site.baseurl }}/assets/img/2022/Taylor-C713-Interface-Board-Fix/07_13_2022_03-min.jpg)
 *Pictured - the brains and circuitry of the C713*
 
 I popped open the access panel and began testing components. Lo and behold, everything passed. Existential dread set in.
 
-*Oh no*, I thought, *it's the board. Something's fried.* In a ditch effort to confirm my suspicions, I transplanted a known-working interface board from an adjacent machine into the faulty machine (a maniac move). Surprise, surprise: I confirmed the issue is the interface board. 
+*Oh no*, I thought, *it's the board. Something's fried.* In a wild ditch effort to confirm my suspicions, I transplanted a known-working interface board from an adjacent machine into the faulty machine (a maniac move). Surprise, surprise: I confirmed the issue is the interface board. 
 
-This is problematic for several reasons: it's a proprietary part, meaning no off-the-shelf components can solve the issue. It's **expensive**, and waiting to get a replacement means that many days of lost potential in revenue for the store. And there's *two* fried interface boards. This is just unacceptable to me, and I knew I had to come up with something creative to get this yogurt machine operational.
+This is problematic for several reasons: it's a proprietary part, meaning no off-the-shelf components can solve the issue. It's **expensive**, and waiting to get a replacement means *that* many days of lost potential in revenue for the store. And there's *two* fried interface boards. This is just unacceptable to me, and I knew I had to come up with something creative to get this yogurt machine operational.
 
 ## Understanding the problem
 
-To recap: we have a machine that won't stop running the right-side beater motor, and won't start the left-side beater motor. In other words, entirely dysfunctional. After accepting my fate, I buttoned the machine back up, condemned it by scribbling on the back, *R.I.P*, in permanent marker, and took both blown interface boards with me back to the office.
+To recap: we have a machine that **won't stop running the right-side beater motor**, and **won't start the left-side beater motor**. In other words, entirely dysfunctional. After accepting my fate, I buttoned the machine back up, condemned it by scribbling *R.I.P* in permanent marker on the back, and took both blown interface boards with me back to the office.
 
 ![]({{ site.baseurl }}/assets/img/2022/Taylor-C713-Interface-Board-Fix/07_13_2022_04-min.jpg)
 *Fig. 1 - A crop of the circuit diagram for the C713*
@@ -99,20 +99,20 @@ I got to work immediately. The first order of business was to sever all of the t
 
 With all the traces from the IC to the optocouplers severed, it's open season to re-arrange them any which way, as long as the known-to-be-fried outputs are avoided. 
 
-I used a cut-up length of CAT-5 cable from a junk ethernet cord for my mod wires. And here is an image after everything was fully soldered up:
+I used cut-up lengths of CAT-5 strands from a junk Ethernet cord for my mod wires. Here is an image after everything was fully soldered up:
 
 ![]({{ site.baseurl }}/assets/img/2022/Taylor-C713-Interface-Board-Fix/07_13_2022_10-min.jpg)
 *Fig. 9 - The back of the 063926-SER Interface Base Board, modded*
 
-Not pictured, I dabbed a bit of hot glue over each solder point for extra guarantee that none of the connections would be compromised or otherwise disrupted. 
+*Not pictured, I dabbed a bit of hot glue over each solder point for extra guarantee that none of the connections would be compromised or otherwise disrupted. *
 
-Also not mentioned, it was easier to destroy all the traces at once, even if some of them would be hooked back up, rather than precicely destroy the couple that I needed to in order move the power output.
+*Also not mentioned, it was easier to destroy all the traces at once, even if some of them would be hooked back up, rather than precicely destroy the couple that I needed to in order move the power output.*
 
 **And that is the fix.**
 
 ## Mission success
 
-Whew. Look at that. The boards installed and ran perfectly. The machine dispensed delicious frozen yogurt. I filled a victory cup, as I always do (so I can "test" the machine), and ceremoniously scarfed the whole thing and ended up with brainfreeze. I was ecstatic.
+Whew. Look at that. The boards installed and ran perfectly. Great success! The machine dispensed delicious frozen yogurt. I filled a victory cup, as I always do (so I can "test" the machine), ceremoniously scarfed the whole thing, and ended up with brainfreeze. Regardless of frozen dairy inflicting cranial discomfort, I was ecstatic.
 
 ![]({{ site.baseurl }}/assets/img/2022/Taylor-C713-Interface-Board-Fix/07_13_2022_11-min.jpg)
 *Pictured: Delicious frozen yogurt. Photo credit - [Fuse Frozen Co](https://www.facebook.com/fusefrozenco)*
@@ -126,4 +126,3 @@ Not today.
 
 
 *Shoutout and thank you to [Fuse Frozen Co.](https://fusefrozenco.com/) for enlisting my help, and for granting permission to publish my findings in this write-up.*
-
