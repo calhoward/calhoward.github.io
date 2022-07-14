@@ -34,7 +34,9 @@ Time to get digging.
 
 To solve issues on a soft serve machine, one must *think* like a soft serve machine. *Be* the soft serve machine. Okay, maybe soft serve machines don't have thoughts, but they do have hidden service menus: I entered my trusty access code, *5-2-3-1*, and accessed the "Manual Control" screen. 
 
-Unsurprisingly, the machine did not respect my commands as I instructed it to engage the left beater motor (*the beater is responsible for dispensing the product*), nor would it disengage the right beater motor. *Cool*, I thought, *the machine has lost its mind*. It must be some combination of a shorted wire and blown fuse, maybe a bad relay, or bad contactor coil.
+Unsurprisingly, the machine did not respect my commands as I instructed it to engage the left beater motor (*the beater is responsible for dispensing the product*), nor would it disengage the right beater motor. 
+
+*Cool*, I thought, *the machine has lost its mind*. It must be some combination of a shorted wire and blown fuse, maybe a bad relay, or bad contactor coil.
 
 ![]({{ site.baseurl }}/assets/img/2022/Taylor-C713-Interface-Board-Fix/07_13_2022_03-min.jpg)
 *Pictured - the brains and circuitry of the C713*
