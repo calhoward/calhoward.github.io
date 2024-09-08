@@ -3,8 +3,6 @@ title: Seamless Function Key Switching for iTerm2 with Karabiner-Elements and Ha
 date: 2024-09-08 13:54:00 +/-TTTT
 image: https://calhoward.com/assets/img/2024/pexels-markusspiske-177598-min.jpg
 ---
-
-![]({{ site.baseurl }}/assets/img/2024/pexels-markusspiske-177598-min.jpg)
 *Photo credit - [Markus Spiske](https://www.pexels.com/@markusspiske/)*
 
 ## Effortless Function Key Toggling for Terminal and System Tasks
