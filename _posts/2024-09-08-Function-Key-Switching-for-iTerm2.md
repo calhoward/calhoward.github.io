@@ -55,7 +55,7 @@ Open the Karabiner-Elements configuration file by navigating to '~/.config/karab
 
 Replace the contents of 'karabiner.json' with the following:
 
-''' json
+``` json
 {
     "profiles": [
         {
@@ -222,7 +222,7 @@ Replace the contents of 'karabiner.json' with the following:
         }
     ]
 }
-'''
+```
 
 This setup creates two profiles: one for iTerm2 where the 'F1'-'F12' keys behave like traditional function keys, and a default profile where they retain their macOS function key behavior (brightness, volume, etc.).
 
@@ -239,7 +239,7 @@ Open the Hammerspoon configuration file by navigating to '~/.hammerspoon/init.lu
 
 Replace the contents of 'init.lua' with the following:
 
-''' lua
+``` lua
 -- Enable logging to track behavior in Console.app
 hs.logger.defaultLogLevel = 'info'
 local log = hs.logger.new('fnKeyLogger', 'info')
@@ -294,7 +294,7 @@ appWatcher:start()
 
 -- Ensure media keys are enabled when Hammerspoon reloads
 disableFunctionKeys()
-'''
+```
     
 This script will automatically detect when iTerm2 becomes the active window and trigger the profile switch in Karabiner-Elements.
 
