@@ -4,7 +4,6 @@ date: 2022-04-28 13:54:00 +/-TTTT
 image: https://calhoward.com/assets/img/2022/pexels-pixabay-207580-Cropped-min.jpg
 ---
 
-![]({{ site.baseurl }}/assets/img/2022/pexels-pixabay-207580-Cropped-min.jpg)
 *Photo credit - [Pixabay](https://www.pexels.com/@pixabay/)*
 
 ## Introduction
