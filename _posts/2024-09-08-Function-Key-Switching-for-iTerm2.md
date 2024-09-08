@@ -9,19 +9,19 @@ image: https://calhoward.com/assets/img/2024/pexels-markusspiske-177598-min.jpg
 
 ## Effortless Function Key Toggling for Terminal and System Tasks
 
-Developers who spend a lot of time in the terminal, especially those working on macOS, know the importance of function keys. When you’re switching between system-level tasks like adjusting brightness and volume and terminal-based tasks like code debugging or managing server sessions, the ability to toggle function keys becomes essential. The challenge? Doing it seamlessly without manually switching profiles or using cumbersome shortcuts.
+For developers who spend time in the terminal, especially on macOS, function keys are crucial. Switching between system tasks like adjusting brightness or volume and terminal work can be frustrating if function keys aren't responsive.
 
-In this guide, we'll show you how to achieve an elegant, instant function key switch when using iTerm2. With the combined power of Karabiner-Elements and Hammerspoon, this solution will automatically switch your function keys to act as F1-F12 in iTerm2 and revert back to their default macOS functions when you switch to other apps. The result is a smooth, instant transition with no noticeable delay-- exactly what you need when toggling between terminal and non-terminal tasks.
+This guide shows you how to achieve seamless function key toggling using iTerm2, Karabiner-Elements, and Hammerspoon. With this setup, function keys automatically switch to F1-F12 in iTerm2 and revert to their default macOS behavior when you switch to other apps, creating a smooth, lag-free experience.
 
 ## Why This Setup is a Game-Changer
 
 Before we dive into the technical setup, let's appreciate the simplicity and beauty of this approach:
 
-- Instant Profile Switching: The beauty of this solution lies in how swiftly it switches between modes based on app focus. There's no lag. As soon as you enter iTerm2, your function keys behave as traditional F1-F12 keys. When you switch back to another app, they instantly revert to their default macOS behavior.
-- No Manual Toggle: Forget having to manually toggle function keys through a modifier or system preferences. Everything happens in the background as you work.
-- Terminal-Specific Functionality: For terminal power users, having easy access to function keys is vital for navigating through apps like Vim, tmux, or debugging sessions. With this setup, you can use the terminal without sacrificing the convenience of system-wide function key actions outside of iTerm2.
+- **Instant Switching**: Function keys change instantly as you switch between iTerm2 and other apps-- no delay.
+- **No Manual Toggle**: The transition happens automatically in the background.
+- **Terminal-Specific Functionality**: Perfect for terminal users needing F1-F12 without losing macOS functionality in other apps.
 
-Now, let's get this up and running.
+Now, let's set it up!
 
 ##  Install Karabiner-Elements
 
@@ -303,6 +303,9 @@ This script will automatically detect when iTerm2 becomes the active window and 
 After configuring both tools, restart Karabiner-Elements and reload the Hammerspoon configuration (click the Hammerspoon icon in the menu bar and choose "'Reload Config'").
 
 Now, open iTerm2 and press any of the function keys ('F1'-'F12'). You should notice that they behave like traditional function keys, enabling functionality that's typically required in a terminal environment. Switch back to any other application, and your function keys will revert to their default macOS behavior-- controlling brightness, volume, and other system settings.
+
+![]({{ site.baseurl }}/assets/img/2024/pexels-olly-3931634-min.jpg)
+*Photo credit - [Andrea Piacquadio](https://www.pexels.com/@olly/)*
 
 ## Enjoy Seamless Switching
 
