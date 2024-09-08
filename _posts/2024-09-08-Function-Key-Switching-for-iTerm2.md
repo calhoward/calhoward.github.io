@@ -11,7 +11,7 @@ image: https://calhoward.com/assets/img/2024/pexels-markusspiske-177598-min.jpg
 
 For developers who spend time in the terminal, especially on macOS, function keys are crucial. Switching between system tasks like adjusting brightness or volume and terminal work can be frustrating if function keys aren't responsive.
 
-This guide shows you how to achieve seamless function key toggling on macOS using [iTerm2](https://iterm2.com/), [Karabiner-Elements](https://karabiner-elements.pqrs.org/), and [Hammerspoon](https://www.hammerspoon.org/). With this setup, function keys automatically switch to 'F1'-'F12' in iTerm2 and revert to their default macOS behavior when you switch to other apps, creating a smooth, lag-free experience.
+This guide shows you how to achieve seamless function key toggling on macOS using [iTerm2](https://iterm2.com/), [Karabiner-Elements](https://karabiner-elements.pqrs.org/), and [Hammerspoon](https://www.hammerspoon.org/). With this setup, function keys automatically switch to `F1`-`F12` in iTerm2 and revert to their default macOS behavior when you switch to other apps, creating a smooth, lag-free experience.
 
 ## Why This Setup is a Game-Changer
 
@@ -19,7 +19,7 @@ Before we dive into the technical setup, let's appreciate the simplicity and bea
 
 - **Instant Switching**: Function keys change instantly as you switch between iTerm2 and other apps-- no delay.
 - **No Manual Toggle**: The transition happens automatically in the background.
-- **Terminal-Specific Functionality**: Perfect for terminal users needing 'F1'-'F12' without losing macOS functionality in other apps.
+- **Terminal-Specific Functionality**: Perfect for terminal users needing `F1`-`F12` without losing macOS functionality in other apps.
 
 Now, let's set it up!
 
@@ -41,7 +41,7 @@ Hammerspoon is another powerful macOS automation tool that lets us script action
 
 Download and install Hammerspoon from [here](https://www.hammerspoon.org/).
 
-Homebrew users may use:
+Alternatively, Homebrew users may use:
 
 ``` bash
 brew install hammerspoon
@@ -51,9 +51,9 @@ brew install hammerspoon
 
 Karabiner-Elements allows us to create different profiles depending on the focused application, in this case, iTerm2.
 
-Open the Karabiner-Elements configuration file by navigating to '~/.config/karabiner/karabiner.json'.
+Open the Karabiner-Elements configuration file by navigating to `~/.config/karabiner/karabiner.json`.
 
-Replace the contents of 'karabiner.json' with the following:
+Replace the contents of `karabiner.json` with the following:
 
 ``` json
 {
@@ -224,20 +224,20 @@ Replace the contents of 'karabiner.json' with the following:
 }
 ```
 
-This setup creates two profiles: one for iTerm2 where the 'F1'-'F12' keys behave like traditional function keys, and a default profile where they retain their macOS function key behavior (brightness, volume, etc.).
+This setup creates two profiles: one for iTerm2 where the `F1`-`F12` keys behave like traditional function keys, and a default profile where they retain their macOS function key behavior (brightness, volume, etc.).
 
 The profiles in the JSON file are structured as follows:
 
-'Default Profile': Assigns the usual system functions (e.g., brightness, volume) to the function keys.
-'iTerm2 Profile': Remaps the function keys to behave as standard function keys ('F1'-'F12'), ideal for use in iTerm2.
+`Default Profile`: Assigns the usual system functions (e.g., brightness, volume) to the function keys.
+`iTerm2 Profile`: Remaps the function keys to behave as standard function keys (`F1`-`F12`), ideal for use in iTerm2.
 
 ## Setting up Hammerspoon
 
 We'll use Hammerspoon to detect when iTerm2 is in focus and switch to the appropriate profile in Karabiner-Elements.
 
-Open the Hammerspoon configuration file by navigating to '~/.hammerspoon/init.lua'.
+Open the Hammerspoon configuration file by navigating to `~/.hammerspoon/init.lua`.
 
-Replace the contents of 'init.lua' with the following:
+Replace the contents of `init.lua` with the following:
 
 ``` lua
 -- Enable logging to track behavior in Console.app
@@ -300,9 +300,9 @@ This script will automatically detect when iTerm2 becomes the active window and 
 
 ## Testing the Setup
 
-After configuring both tools, restart Karabiner-Elements and reload the Hammerspoon configuration (click the Hammerspoon icon in the menu bar and choose "'Reload Config'").
+After configuring both tools, restart Karabiner-Elements and reload the Hammerspoon configuration (click the Hammerspoon icon in the menu bar and choose "`Reload Config`").
 
-Now, open iTerm2 and press any of the function keys ('F1'-'F12'). You should notice that they behave like traditional function keys, enabling functionality that's typically required in a terminal environment. Switch back to any other application, and your function keys will revert to their default macOS behavior-- controlling brightness, volume, and other system settings.
+Now, open iTerm2 and press any of the function keys (`F1`-`F12`). You should notice that they behave like traditional function keys, enabling functionality that's typically required in a terminal environment. Switch back to any other application, and your function keys will revert to their default macOS behavior-- controlling brightness, volume, and other system settings.
 
 ## Enjoy Seamless Switching
 
