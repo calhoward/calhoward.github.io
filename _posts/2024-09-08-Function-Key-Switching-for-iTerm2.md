@@ -1,11 +1,11 @@
 ---
 title: Seamless Function Key Switching for iTerm2 with Karabiner-Elements and Hammerspoon
 date: 2024-09-08 13:54:00 +/-TTTT
-image: https://calhoward.com/assets/img/2022/pexels-pixabay-207580-Cropped-min.jpg
+image: https://calhoward.com/assets/img/2024/pexels-markusspiske-177598-min.jpg
 ---
 
-![]({{ site.baseurl }}/assets/img/2022/pexels-pixabay-207580-Cropped-min.jpg)
-*Photo credit - [Pixabay](https://www.pexels.com/@pixabay/)*
+![]({{ site.baseurl }}/assets/img/2024/pexels-markusspiske-177598-min.jpg)
+*Photo credit - [Markus Spiske](https://www.pexels.com/@markusspiske/)*
 
 ## Effortless Function Key Toggling for Terminal and System Tasks
 
@@ -17,9 +17,9 @@ In this guide, we'll show you how to achieve an elegant, instant function key sw
 
 Before we dive into the technical setup, let's appreciate the simplicity and beauty of this approach:
 
-	- Instant Profile Switching: The beauty of this solution lies in how swiftly it switches between modes based on app focus. There's no lag. As soon as you enter iTerm2, your function keys behave as traditional F1-F12 keys. When you switch back to another app, they instantly revert to their default macOS behavior.
-	- No Manual Toggle: Forget having to manually toggle function keys through a modifier or system preferences. Everything happens in the background as you work.
-	- Terminal-Specific Functionality: For terminal power users, having easy access to function keys is vital for navigating through apps like Vim, tmux, or debugging sessions. With this setup, you can use the terminal without sacrificing the convenience of system-wide function key actions outside of iTerm2.
+- Instant Profile Switching: The beauty of this solution lies in how swiftly it switches between modes based on app focus. There's no lag. As soon as you enter iTerm2, your function keys behave as traditional F1-F12 keys. When you switch back to another app, they instantly revert to their default macOS behavior.
+- No Manual Toggle: Forget having to manually toggle function keys through a modifier or system preferences. Everything happens in the background as you work.
+- Terminal-Specific Functionality: For terminal power users, having easy access to function keys is vital for navigating through apps like Vim, tmux, or debugging sessions. With this setup, you can use the terminal without sacrificing the convenience of system-wide function key actions outside of iTerm2.
 
 Now, let's get this up and running.
 
@@ -29,7 +29,7 @@ If you don't already have it, Karabiner-Elements is an essential tool for remapp
 
 Download and install Karabiner-Elements from [here](https://karabiner-elements.pqrs.org/).
 
-If you have [homebrew](https://brew.sh/) installed, you can use:
+If you have [Homebrew](https://brew.sh/) installed, you can use:
 
 ``` bash
 brew install karabiner-elements
@@ -237,10 +237,63 @@ We'll use Hammerspoon to detect when iTerm2 is in focus and switch to the approp
 
 Open the Hammerspoon configuration file by navigating to '~/.hammerspoon/init.lua'.
 
-Replace the contents of 'karabiner.json' with the following:
+Replace the contents of 'init.lua' with the following:
 
 ''' lua
+-- Enable logging to track behavior in Console.app
+hs.logger.defaultLogLevel = 'info'
+local log = hs.logger.new('fnKeyLogger', 'info')
 
+-- Escaped path to Karabiner-Elements CLI (handle spaces in path)
+local karabinerCliPath = "/Library/Application\\ Support/org.pqrs/Karabiner-Elements/bin/karabiner_cli"
+
+-- Karabiner-Elements profile names
+local defaultProfile = "Default profile"
+local iterm2Profile = "iTerm2"
+
+-- Function to switch Karabiner profiles
+local function switchKarabinerProfile(profileName)
+    -- Construct the command to be run inside a shell
+    local command = string.format("sh -c '%s --select-profile \"%s\"'", karabinerCliPath, profileName)
+    log.i("Executing command: " .. command)  -- Log the command for debugging
+    local result, status, exitCode = hs.execute(command)
+
+    -- Log success or failure
+    if status then
+        log.i("Successfully switched to profile: " .. profileName)
+    else
+        log.e("Error switching Karabiner profile. Output: " .. result .. " Exit Code: " .. tostring(exitCode))
+    end
+end
+
+-- Function to switch to function key profile when iTerm2 is focused
+local function enableFunctionKeys()
+    log.i("iTerm2 focused: Enabling function key profile.")
+    switchKarabinerProfile(iterm2Profile)
+end
+
+-- Function to switch to media key profile when iTerm2 is not focused
+local function disableFunctionKeys()
+    log.i("iTerm2 unfocused: Enabling media key profile.")
+    switchKarabinerProfile(defaultProfile)
+end
+
+-- Watch for iTerm2 focus events
+local appWatcher = hs.application.watcher.new(function(appName, eventType, app)
+    if appName == "iTerm2" then
+        if eventType == hs.application.watcher.activated then
+            enableFunctionKeys()
+        elseif eventType == hs.application.watcher.deactivated then
+            disableFunctionKeys()
+        end
+    end
+end)
+
+-- Start the application watcher
+appWatcher:start()
+
+-- Ensure media keys are enabled when Hammerspoon reloads
+disableFunctionKeys()
 '''
     
 This script will automatically detect when iTerm2 becomes the active window and trigger the profile switch in Karabiner-Elements.
