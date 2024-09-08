@@ -4,7 +4,6 @@ date: 2022-05-15 12:00:00 +/-TTTT
 image: https://calhoward.com/assets/img/2022/Hacking-Leviton-Fan-Humidity-Switch/05_15_2022_01-min.jpg
 ---
 
-![]({{ site.baseurl }}/assets/img/2022/Hacking-Leviton-Fan-Humidity-Switch/05_15_2022_01-min.jpg)
 *Pictured - The fully disassembled Leviton IPHS5-1LW*
 
 ## Introduction
