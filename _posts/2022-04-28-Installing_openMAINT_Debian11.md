@@ -4,7 +4,6 @@ date: 2022-04-29 10:48:00 +/-TTTT
 image: https://calhoward.com/assets/img/2022/pexels-kateryna-babaieva-2760241-Cropped-min.jpg
 ---
 
-![]({{ site.baseurl }}/assets/img/2022/pexels-kateryna-babaieva-2760241-Cropped-min.jpg)
 *Photo credit - [Kateryna Babaieva](https://www.pexels.com/@kateryna-babaieva-1423213/)*
 
 ## Introduction
